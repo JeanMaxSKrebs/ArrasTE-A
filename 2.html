@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Fevereiro</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <style rel="stylesheet" href="style.css"></style>
+    <script src="main.js" defer></script>
+    <style>
+        #divInicial {
+            float: left;
+            width: 27.5rem;
+            height: 35rem;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        #divFinal {
+            float: left;
+            width: 53.5rem;
+            height: 35rem;
+            margin: 10px;
+            padding: 10px;
+            border: 2px solid black;
+        }
+
+        #divFinal div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            float: left;
+            width: 15rem;
+            height: 15rem;
+            margin: 10px;
+            /* border: 2px solid rgb(0, 26, 255); */
+        }
+
+        #divFinal div div {
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 0px;
+            border: 2px dashed black;
+        }
+
+        #divFinal div div#circle {
+            width: 1.5rem;
+            height: 1.5rem;
+            border-radius: 50%;
+            padding: 10px;
+            background-color: aquamarine;
+            border: 0px;
+        }
+
+        #divFinal div div#square {
+            width: 1.5rem;
+            height: 1.5rem;
+            padding: 10px;
+            background-color: aquamarine;
+            border: 0px;
+        }
+
+        #divFinal div div#triangle {
+            border: 0px;
+            width: 0;
+            height: 0;
+
+            border: 1.5rem solid transparent;
+            border-top: 0;
+            border-bottom: 2.5rem solid aquamarine;
+        }
+
+        #divFinal div div#triangle i {
+            padding: 10px;
+            margin: 10px;
+
+        }
+    </style>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            ev.target.appendChild(document.getElementById(data));
+            console.log(ev.dataTransfer.getData());
+        }
+    </script>
+</head>
+
+<body>
+    <section id="divInicial" class="fa-10x draggable-elements">
+        <i class="far fa-square fa-fw draggable" draggable="true" id="square" ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="two" ondragstart="drag(event)"></i>
+    </section>
+    <section id="divFinal" class="fa-3x droppable-elements">
+        <div>
+            <div class="droppable" data-draggable-id="square" id="square" ondrop="drop(event)"
+                ondragover="allowDrop(event)"> </div>
+        </div>
+        <div>
+            <!-- <span>Two</span> -->
+            <div class="droppable" data-draggable-id="two" id="two" ondrop="drop(event)" ondragover="allowDrop(event)">
+            </div>
+        </div>
+        <div>
+            <a href="3.html"><button>NEXT</button></a>
+        </div>
+    </section>
+</body>
+
+</html>
