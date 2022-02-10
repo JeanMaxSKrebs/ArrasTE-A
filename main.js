@@ -57,13 +57,19 @@ function retirarLetras(element, qtd) {
 }
 
 function verificarNext() {
+    console.log(next);
     if(next >= 2) {
-        button = document.getElementById("next");
+        // console.log("teste");
+        button = document.getElementById("verificar");
         
-        button.disabled;
+        // console.log(button);
+        
+        button.setAttribute("disabled", "true");
         
         button = document.getElementById("next");
 
-        button.enabled;
+        // console.log(button);
+        
+        button.removeAttribute("disabled");        
     }
 }
