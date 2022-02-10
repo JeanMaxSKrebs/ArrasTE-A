@@ -46,11 +46,10 @@
 }
 
 #divFinal div div#triangle {
-    border: 0px;
-    width: 0;
-    height: 0;
-
     border: 1.5rem solid transparent;
     border-top: 0;
     border-bottom: 2.5rem solid aquamarine;
+}
+#divFinal div div#triangle i{
+    padding-top: 2.5rem;
 }

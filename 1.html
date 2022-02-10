@@ -18,12 +18,18 @@
 
 <body>
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
+        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmouseover="mouseOver(id)"
+            ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneIcon" onmouseover="mouseOver(id)"
+            ondragstart="drag(event)"></i>
+        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmouseover="mouseOver(id)"
+            ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoIcon" onmouseover="mouseOver(id)"
+            ondragstart="drag(event)"></i>
+        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmouseover="mouseOver(id)"
+            ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeIcon" onmouseover="mouseOver(id)"
+            ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">
         <div>
@@ -37,8 +43,12 @@
                 ondragover="allowDrop(event)">
             </div>
         </div>
+        </div>
         <div>
-            <a href="2.html"><button>NEXT</button></a>
+            <a><button id="verificar" onclick="verificarNext()">Verificar</button></a>
+        </div>
+        <div>
+            <a href="2.html"><button id="next" disabled>NEXT</button></a>
         </div>
 
 

@@ -1,7 +1,9 @@
+let next = 0;
+
 function verificarBox(element) {
     icon = document.getElementById(element);
 
-    console.log(icon);
+    // console.log(icon);
     // console.log(element);
 
     element += "Icon";
@@ -12,6 +14,9 @@ function verificarBox(element) {
     if (element !== null) {
         // console.log("MUITO BEM");
         playSong("muito_bem");
+        console.log(next);
+        next += 1;
+        console.log(next);
 
     } else {
         // console.log("ERRO");
@@ -49,4 +54,16 @@ function retirarLetras(element, qtd) {
     newElement = element.substring(0, element.length - qtd);
 
     return newElement;
+}
+
+function verificarNext() {
+    if(next >= 2) {
+        button = document.getElementById("next");
+        
+        button.disabled;
+        
+        button = document.getElementById("next");
+
+        button.enabled;
+    }
 }
