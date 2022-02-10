@@ -15,13 +15,13 @@
 </head>
 
 <body>
-    <section id="divInicial" class="fa-8x draggable-elements">
-        <i class="far fa-circle fa-fw draggable" draggable="true" id="circle" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="one" ondragstart="drag(event)"></i>
-        <i class="far fa-square fa-fw draggable" draggable="true" id="square" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="two" ondragstart="drag(event)"></i>
-        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangle" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="three" ondragstart="drag(event)"></i>
+    <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
+        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
+        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">
         <div>
@@ -42,6 +42,16 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
         <script src="main.js" defer></script>
+        
+        <audio src='./audio/one.mpeg'></audio>
+        <audio src='./audio/two.mpeg'></audio>
+        <audio src='./audio/three.mpeg'></audio>
+        <audio src='./audio/circle.mpeg'></audio>
+        <audio src='./audio/square.mpeg'></audio>
+        <audio src='./audio/triangle.mpeg'></audio>
+        <audio src='./audio/muito_bem.mpeg'></audio>
+        <audio src='./audio/tente_novamente.mpeg'></audio>
+
     </footer>
 </body>
 
