@@ -1,18 +1,15 @@
 #divInicial {
     float: left;
-    width: 22.5rem;
-    height: 35rem;
-    margin: 10px;
-    padding: 10px;
+    width: 25%;
+    height: 100%;
     border: 2px solid black;
+    margin-right: 10px;
 }
 
 #divFinal {
     float: left;
-    width: 53.5rem;
-    height: 35rem;
-    margin: 10px;
-    padding: 10px;
+    width: 50%;
+    height: 100%;
     border: 2px solid black;
 }
 
@@ -24,8 +21,12 @@
     float: left;
     width: 15rem;
     height: 15rem;
+}
+#divFinal div#next {
+    float: left;
+    width: 30rem;
+    height: 15rem;
     margin: 10px;
-    /* border: 2px solid rgb(0, 26, 255); */
 }
 
 #divFinal div div {
@@ -39,7 +40,6 @@
     width: 1.5rem;
     height: 1.5rem;
     border-radius: 50%;
-    padding: 10px;
     background-color: aquamarine;
     border: 0px;
 }
@@ -47,7 +47,6 @@
 #divFinal div div#square {
     width: 1.5rem;
     height: 1.5rem;
-    padding: 10px;
     background-color: aquamarine;
     border: 0px;
 }
@@ -60,10 +59,4 @@
     border: 1.5rem solid transparent;
     border-top: 0;
     border-bottom: 2.5rem solid aquamarine;
-}
-
-#divFinal div div#triangle i {
-    padding: 10px;
-    margin: 10px;
-
 }
