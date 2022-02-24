@@ -39,12 +39,17 @@ function verificarBox(ev) {
 function retirarIMG(element) {
     // console.log(element);
     element = document.querySelector("#" + element);
-    // console.log(element);
+    console.log(element);
 
     element.parentNode.removeChild(element);
 }
 function colocarICON(element) {
-    divIcon = document.getElementById("divIcon");
+    console.log(element);
+    elementComparation = retirarLetras(element.id, 4);
+
+    divIcon = document.getElementById(elementComparation);
+
+    console.log(divIcon);
 
     divIcon.appendChild(element);
 }
