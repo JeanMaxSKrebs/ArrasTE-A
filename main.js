@@ -13,11 +13,11 @@ function verificarBox(ev) {
 
     elementComparation = retirarLetras(elementIcon.id, 4);
 
-    console.log(elementComparation);
+    // console.log(elementComparation);
 
     if (element == elementComparation) {
 
-        // console.log("MUITO BEM");
+        console.log("MUITO BEM");
         playSong("muito_bem");
         // console.log(next);
         next += 1;
@@ -27,9 +27,10 @@ function verificarBox(ev) {
         colocarICON(elementIcon);
 
         elementIcon.setAttribute("draggable", "false");
+        elementIcon.setAttribute("ondragstart", "");
     } else {
 
-        // console.log("ERRO");
+        console.log("ERRO");
         playSong("tente_novamente");
         console.log(elementIcon);
         voltarICON(elementIcon);
@@ -39,17 +40,12 @@ function verificarBox(ev) {
 function retirarIMG(element) {
     // console.log(element);
     element = document.querySelector("#" + element);
-    console.log(element);
+    // console.log(element);
 
     element.parentNode.removeChild(element);
 }
 function colocarICON(element) {
     console.log(element);
-    elementComparation = retirarLetras(element.id, 4);
-
-    divIcon = document.getElementById(elementComparation);
-
-    console.log(divIcon);
 
     divIcon.appendChild(element);
 }

@@ -24,14 +24,17 @@
         <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">
-        <div>
-            <div class="droppable" data-draggable-id="square" id="square" ondrop="drop(event);verificarBox(id);"
-                ondragover="allowDrop(event)"> </div>
-        </div>
-        <div>
-            <!-- <span>Two</span> -->
-            <div class="droppable" data-draggable-id="two" id="two" ondrop="drop(event);verificarBox(id);"
-                ondragover="allowDrop(event)">
+        <div id="Final">
+            <div id="divIcon">
+                <img class="droppable" data-draggable-id="square" id="square" src="img/square shadow.png" height="50px"
+                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+            </div>
+
+            <div id="divNumber">
+                <!-- <span>One</span> -->
+                <div class="droppable" data-draggable-id="two" id="two" ondrop="drop(event);verificarBox(event);"
+                    ondragover="allowDrop(event)">
+                </div>
             </div>
         </div>
         <div>
