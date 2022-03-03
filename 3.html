@@ -16,12 +16,12 @@
 
 <body>
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeIcon" onmouseover="mouseOver(id)" ondragstart="drag(event)"></i>
+        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
+        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
+        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">
         <div id="Final">
@@ -50,9 +50,9 @@
             crossorigin="anonymous"></script>
         <script src="main.js" defer></script>
         
-        <audio src='./audio/one.mpeg'></audio>
-        <audio src='./audio/two.mpeg'></audio>
-        <audio src='./audio/three.mpeg'></audio>
+        <audio src='./audio/oneNu.mpeg'></audio>
+        <audio src='./audio/twoNu.mpeg'></audio>
+        <audio src='./audio/threeNu.mpeg'></audio>
         <audio src='./audio/circle.mpeg'></audio>
         <audio src='./audio/square.mpeg'></audio>
         <audio src='./audio/triangle.mpeg'></audio>

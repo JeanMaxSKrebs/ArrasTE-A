@@ -7,13 +7,22 @@ function verificarBox(ev) {
 
     element = ev.target.id;
     elementIcon = lastDrag;
+    elementIconId = lastDragId
 
     console.log(element);
-    console.log(elementIcon.id);
+    console.log(elementIconId);
 
-    elementComparation = retirarLetras(elementIcon.id, 4);
+    if(elementIconId.indexOf("Number") == -1) {
+        elementComparation = retirarLetras(elementIcon.id, 4);
+        icon = true;
+        number = false;
+    } else {
+        elementComparation = retirarLetras(elementIcon.id, 6);
+        icon = false;
+        number = true;
+    }
 
-    // console.log(elementComparation);
+    console.log(elementComparation);
 
     if (element == elementComparation) {
 
@@ -24,7 +33,12 @@ function verificarBox(ev) {
         // console.log(next);
         // console.log(element);
         retirarIMG(element);
-        colocarICON(elementIcon);
+        console.log(elementIcon);
+        if(icon) {
+            colocarICON(elementIcon);
+        } else if(number) {
+            colocarNumber(elementIcon);
+        }
 
         elementIcon.setAttribute("draggable", "false");
         elementIcon.setAttribute("ondragstart", "");
@@ -32,8 +46,13 @@ function verificarBox(ev) {
 
         console.log("ERRO");
         playSong("tente_novamente");
+
         console.log(elementIcon);
-        voltarICON(elementIcon);
+        if(icon) {
+            voltarICON(elementIcon);
+        } else if(number) {
+            voltarNumber(elementIcon);
+        }
 
     }
 }
@@ -44,15 +63,27 @@ function retirarIMG(element) {
 
     element.parentNode.removeChild(element);
 }
+function colocarNumber(element) {
+    console.log(element);
+    divNumber = document.getElementById("divNumber");
+
+    divNumber.appendChild(element);
+}
+function voltarNumber(element) {
+    divInicial = document.getElementById("divInicial");
+
+    divInicial.appendChild(element);
+}
 function colocarICON(element) {
     console.log(element);
+    divIcon = document.getElementById("divIcon");
 
     divIcon.appendChild(element);
 }
 function voltarICON(element) {
-    divIcon = document.getElementById("divInicial");
+    divInicial = document.getElementById("divInicial");
 
-    divIcon.appendChild(element);
+    divInicial.appendChild(element);
 }
 
 function allowDrop(ev) {
@@ -78,7 +109,7 @@ function playSong(element) {
     audio.play();
 }
 
-function mouseOver(element) {
+function verificarSong(element) {
     // console.log(element);
     element = retirarLetras(element, 4);
     // console.log(element);
@@ -106,5 +137,10 @@ function verificarNext() {
         // console.log(button);
 
         button.removeAttribute("disabled");
+    } else {
+        alerta();
     }
+}
+function alerta() {
+    alert("VERIFIQUE AS RESPOSTAS PARA IR PARA A PRÓXIMA FASE");
 }
