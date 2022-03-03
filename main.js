@@ -139,7 +139,9 @@ function verificarNext() {
 
         button.removeAttribute("disabled");
         alerta = false;
+        playSong("muito_bem");
     } else {
+        playSong("tente_novamente");
         alertar();
     }
 }
