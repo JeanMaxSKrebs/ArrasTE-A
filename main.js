@@ -1,6 +1,7 @@
 let next = 0;
 let lastDrag;
 let lastDragId;
+let alerta = true;
 
 function verificarBox(ev) {
     // console.log(lastDrag);
@@ -137,10 +138,12 @@ function verificarNext() {
         // console.log(button);
 
         button.removeAttribute("disabled");
+        alerta = false;
     } else {
-        alerta();
+        alertar();
     }
 }
-function alerta() {
-    alert("VERIFIQUE AS RESPOSTAS PARA IR PARA A PRÓXIMA FASE");
+function alertar() {
+    if(alerta == true)
+        alert("VERIFIQUE AS RESPOSTAS PARA IR PARA A PRÓXIMA FASE");
 }
