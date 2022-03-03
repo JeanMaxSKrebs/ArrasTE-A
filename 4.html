@@ -18,25 +18,23 @@
 
 <body>
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <i class="far fa-circle fa-fw draggable" draggable="true" id="meninaIcon" onmousedown="verificarSong(id)"
+        <img src="./img/menina.png" height="200px" draggable="true" id="meninaIcon" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></img>
+        <i class="fas fa-dice-four fa-fw draggable" draggable="true" id="fourNumber" onmousedown="verificarSong(id)"
             ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="fourNumber" onmousedown="verificarSong(id)"
+            <img src="./img/boneca.png" height="200px" draggable="true" id="bonecaIcon" onmousedown="verificarSong(id)"
+                ondragstart="drag(event)"></img>
+        <i class="fas fa-dice-five fa-fw draggable" draggable="true" id="fiveNumber" onmousedown="verificarSong(id)"
             ondragstart="drag(event)"></i>
-        <i class="far fa-square fa-fw draggable" draggable="true" id="meninoIcon" onmousedown="verificarSong(id)"
-            ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="fiveNumber" onmousedown="verificarSong(id)"
-            ondragstart="drag(event)"></i>
-        <i class="far fa-triangle fa-fw draggable" draggable="true" id="carroIcon" onmousedown="verificarSong(id)"
-            ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="sixNumber" onmousedown="verificarSong(id)"
-            ondragstart="drag(event)"></i>
-        <i class="far fa-triangle fa-fw draggable" draggable="true" id="bonecaIcon" onmousedown="verificarSong(id)"
+        <img src="./img/carro.png" height="140px" draggable="true" id="carroIcon" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></img>
+        <i class="fas fa-dice-six fa-fw draggable" draggable="true" id="sixNumber" onmousedown="verificarSong(id)"
             ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">
         <div id="Final">
             <div id="divIcon">
-                <img class="droppable" data-draggable-id="menina" id="menina" src="img/menina shadow.png" height="50px"
+                <img class="droppable" data-draggable-id="menina" id="menina" src="img/menina shadow.png" height="100px"
                     ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
             </div>
 
