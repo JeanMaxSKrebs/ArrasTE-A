@@ -11,11 +11,27 @@ function comoJogar() {
     backModal = document.createElement("backModal");
     backModal.className = "backModal";
     backModal.ariaHidden = "false";
-
     modal.appendChild(backModal);
 
     div = document.createElement("div");
     modal.appendChild(div);
+    
+    h1 = document.createElement("h1");
+    h1.color = "#fff";
+    h1.style.textDecoration = "underline";
+    h1.textContent = "COMO JOGAR";
+    div.appendChild(h1);
+
+    h3 = document.createElement("h3");
+    h3.textContent = "VOCÊ DEVE COLOCAR AS IMAGENS EM SUAS DEVIDAS SOMBRAS"
+    div.appendChild(h3);
+    h1 = document.createElement("h1");
+    h1.textContent = "E"
+    div.appendChild(h1);
+    h3 = document.createElement("h3");
+    h3.textContent = "NO QUADRADO PONTILHADO O DADO CORRESPONDENTE A PÁGINA"
+    div.appendChild(h3);
+
 
     a = document.createElement("a");
     a.className = "fecharcomoJogar"
@@ -162,21 +178,20 @@ function retirarLetras(element, qtd) {
     return newElement;
 }
 
-function verificarNext() {
+function verificarNext(nextPage) {
+    console.log(nextPage);
     console.log(next);
+
+    // fazer switch case
     if (next >= 2) {
-        // console.log("teste");
         button = document.getElementById("verificar");
 
-        // console.log(button);
+        button.id = "next";
+        button.textContent = "NEXT";
+        button.removeAttribute("onclick");
 
-        button.setAttribute("disabled", "true");
+        button.parentNode.setAttribute("href", nextPage+".html");
 
-        button = document.getElementById("next");
-
-        // console.log(button);
-
-        button.removeAttribute("disabled");
         alerta = false;
         playSong("muito_bem");
     } else {
@@ -185,6 +200,7 @@ function verificarNext() {
     }
 }
 function alertar() {
-    if(alerta == true)
+    if(alerta == true) {
         alert("VERIFIQUE AS RESPOSTAS PARA IR PARA A PRÓXIMA FASE");
+    }
 }

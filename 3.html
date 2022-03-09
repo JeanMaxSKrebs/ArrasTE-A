@@ -16,18 +16,24 @@
 
 <body>
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
-        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
-        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber" onmousedown="verificarSong(id)" ondragstart="drag(event)"></i>
+        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></i>
+        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></i>
+        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></i>
+        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber" onmousedown="verificarSong(id)"
+            ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">
         <div id="Final">
             <div id="divIcon">
-                <img class="droppable" data-draggable-id="triangle" id="triangle" src="img/triangle shadow.png" height="50px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                <img class="droppable" data-draggable-id="triangle" id="triangle" src="img/triangle shadow.png"
+                    height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
             </div>
 
             <div id="divNumber">
@@ -37,19 +43,31 @@
                 </div>
             </div>
         </div>
+    </section>
+    <section id="boxVerificar" class="fa droppable-elements">
         <div>
-            <a><button id="verificar" onclick="verificarNext()">Verificar</button></a>
-        </div>
-        <div>
-            <a href="4.html"><button id="next" disabled>NEXT</button></a>
+            <div>
+                <a><button id="verificar" onclick="verificarNext(4)">VERIFICAR</button></a>
+            </div>
+
         </div>
     </section>
+    <section>
+        <div>
+            <a>
+                <button id="buttoncomoJogar" onclick="comoJogar()">
+                    AJUDA
+                </button>
+            </a>
+        </div>
+    </section>
+    
     <footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
         <script src="main.js" defer></script>
-        
+
         <audio src='./audio/oneNu.mpeg'></audio>
         <audio src='./audio/twoNu.mpeg'></audio>
         <audio src='./audio/threeNu.mpeg'></audio>

@@ -17,17 +17,21 @@
     justify-content: center;
     align-items: center;
 }
+#comoJogar h1, h2, h3 {
+    text-align: center;
+    color: #fff;
+}
 #comoJogar div {
     position: absolute;
 
     opacity: 1;
-    width: 300px;
+    width: 400px;
     height: 300px;
     background: rgb(0, 0, 0);
 }
 
 .fecharcomoJogar {
-    top: 150px;
+    top: 200px;
     position: relative;
 }
 
@@ -163,4 +167,14 @@
 #next:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
                 inset 2px 2px 3px rgba(0, 0, 0, .6);
+}
+
+#buttoncomoJogar {
+    color: #fff;
+    background-color: #000;
+    position: fixed;
+
+    width: 100px;
+    left: 10px;
+    top: 90vh;
 }
