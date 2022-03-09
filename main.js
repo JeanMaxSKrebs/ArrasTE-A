@@ -3,6 +3,45 @@ let lastDrag;
 let lastDragId;
 let alerta = true;
 
+function comoJogar() {
+    modal = document.createElement("div");
+    modal.id = "comoJogar";
+    modal.ariaHidden = "true";
+
+    backModal = document.createElement("backModal");
+    backModal.className = "backModal";
+    backModal.ariaHidden = "false";
+
+    modal.appendChild(backModal);
+
+    div = document.createElement("div");
+    modal.appendChild(div);
+
+    a = document.createElement("a");
+    a.className = "fecharcomoJogar"
+    modal.appendChild(a);
+    
+    button = document.createElement("button");
+    button.setAttribute("onclick", "fecharcomoJogar()");
+    button.textContent = "Voltar";
+
+    a.appendChild(button);
+
+    console.log(modal);
+    console.log(backModal);
+
+    modal.ariaHidden = "false";
+    backModal.ariaHidden = "true";
+
+    document.body.appendChild(modal);
+}
+
+function fecharcomoJogar() {
+    modal = document.getElementById("comoJogar");
+
+    modal.parentNode.removeChild(modal);
+}
+
 function verificarBox(ev) {
     // console.log(lastDrag);
 
