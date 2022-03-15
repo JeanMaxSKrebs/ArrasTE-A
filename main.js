@@ -2,6 +2,7 @@ let next = 0;
 let lastDrag;
 let lastDragId;
 let alerta = true;
+let definicaoShadow;
 
 function comoJogar() {
     modal = document.createElement("div");
@@ -131,10 +132,24 @@ function voltarNumber(element) {
     divInicial.appendChild(element);
 }
 function colocarICON(element) {
-    console.log(element);
+    let img = element.src;
+    // console.log(img);
+
+    // console.log(element);
     divIcon = document.getElementById("divIcon");
+    
+    // console.log(definicaoShadow);
+    
+    element = definicaoShadow.cloneNode(true);
+    // definicaoShadow = element.cloneNode(true);
+
+    // console.log(element);
+    // console.log(definicaoShadow);
+
+    element.src = img;
 
     divIcon.appendChild(element);
+    
 }
 function voltarICON(element) {
     divInicial = document.getElementById("divInicial");
@@ -203,4 +218,33 @@ function alertar() {
     if(alerta == true) {
         alert("VERIFIQUE AS RESPOSTAS PARA IR PARA A PRÓXIMA FASE");
     }
+}
+
+function shadowImage(element, x, y, cenario) {
+    // console.log(cenario);
+    url = "../img/"+cenario+".png";
+    // console.log(url);
+
+    cenario = document.querySelector(".cenario");
+    // console.log(cenario);
+
+    cenario.style.backgroundImage.url = "url("+url+")";
+
+    // console.log(element);
+
+    element = document.getElementById(element);
+
+    // console.log(element);
+
+    // teste // divIcon = element.parentNode;
+    divIcon = element;
+    console.log(divIcon);
+
+    console.log(x, y);
+    divIcon.style.position = 'absolute';
+    divIcon.style.display = "block";
+    divIcon.style.left = x;
+    divIcon.style.top = y;
+
+    definicaoShadow = divIcon;
 }

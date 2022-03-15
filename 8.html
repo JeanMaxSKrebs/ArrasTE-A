@@ -16,34 +16,16 @@
 
 </head>
 
-<body>
+<body onload="shadowImage('carro', '330px', '280px', 'cenario19')">
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <img src="./img/menina.png" height="200px" draggable="true" id="meninaIcon" onmousedown="verificarSong(id)"
-            ondragstart="drag(event)"></img>
-        <img src="./img/menino.png" height="200px" draggable="true" id="meninoIcon" onmousedown="verificarSong(id)"
-            ondragstart="drag(event)"></img>
         <img src="./img/carro.png" height="140px" draggable="true" id="carroIcon" onmousedown="verificarSong(id)"
             ondragstart="drag(event)"></img>
-        <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaIcon" onmousedown="verificarSong(id)"
-            ondragstart="drag(event)"></img>
     </section>
+    <img src="img/cenario19.png" class="cenario">
     <section id="divFinal" class="fa-3x droppable-elements">
         <div id="Final">
             <div id="divIcon">
                 <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro shadow.png" height="100px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-            <div id="divIcon">
-                <img class="droppable" data-draggable-id="boneca" id="boneca" src="img/boneca shadow.png" height="100px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-            <div id="divIcon">
-
-                <img class="droppable" data-draggable-id="menina" id="menina" src="img/menina shadow.png" height="100px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-            <div id="divIcon">
-                <img class="droppable" data-draggable-id="menino" id="menino" src="img/menino shadow.png" height="100px"
                     ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
             </div>
 
@@ -59,7 +41,7 @@
             <div>
                 <a><button id="verificar" onclick="verificarNext(8)">VERIFICAR</button></a>
             </div>
-           
+
         </div>
     </section>
     <section>
@@ -78,10 +60,6 @@
             crossorigin="anonymous"></script>
         <script src="main.js" defer></script>
 
-
-        <audio src='./audio/fourNu.mpeg'></audio>
-        <audio src='./audio/fiveNu.mpeg'></audio>
-        <audio src='./audio/sixNu.mpeg'></audio>
         <audio src='./audio/boneca.mpeg'></audio>
         <audio src='./audio/carro.mpeg'></audio>
         <audio src='./audio/menino.mpeg'></audio>
