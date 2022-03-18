@@ -214,11 +214,14 @@ function playSong(element) {
     audio.play();
 }
 
-function verificarSong(element, letrasRetirar) {
-    // console.log(element);
-    element = retirarLetras(element, letrasRetirar);
-    // console.log(element);
+function verificarSong(element, letrasRetirar, tipo) {
 
+    element = retirarLetras(element, letrasRetirar);
+
+    if(tipo == 'som') {
+        element = element + 'Song';
+    }
+    console.log(element);    
     playSong(element);
 }
 function retirarLetras(element, qtd) {

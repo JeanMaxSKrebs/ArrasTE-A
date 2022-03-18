@@ -16,20 +16,25 @@
 
 </head>
 
-<body onload="shadowImage('carro', '330px', '280px', 'cenario19'),shadowImage('boneca', '200px', '300px', 'cenario19')">
+<body onload="shadowImage('galinha', '100px', '370px', 'cenario1'), shadowImage('vaca', '370px', '370px', 'cenario1'), 
+shadowImage('ovelha', '220px', '250px', 'cenario1')">
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <img src="./img/carro.png" height="140px" draggable="true" id="carroImg" onmousedown="verificarSong(id, 3)"
+        <img src="./img/galinha.png" height="140px" draggable="true" id="galinhaImg" onmousedown="verificarSong(id, 3, 'som')"
             ondragstart="drag(event)"></img>
-        <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaImg" onmousedown="verificarSong(id, 3)"
+        <img src="./img/vaca.png" height="140px" draggable="true" id="vacaImg" onmousedown="verificarSong(id, 3, 'som')"
+            ondragstart="drag(event)"></img>
+        <img src="./img/ovelha.png" height="140px" draggable="true" id="ovelhaImg" onmousedown="verificarSong(id, 3, 'som')"
             ondragstart="drag(event)"></img>
     </section>
-    <img src="img/cenario19.png" class="cenario">
+    <img src="img/cenario1.png" class="cenario">
     <section id="divFinal" class="fa-3x droppable-elements">
         <div id="Final">
             <div id="divIcon">
-                <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro shadow.png" height="100px"
+                <img class="droppable" data-draggable-id="galinha" id="galinha" src="img/galinha shadow.png" height="100px"
                     ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-                <img class="droppable" data-draggable-id="boneca" id="boneca" src="img/boneca shadow.png" height="100px"
+                <img class="droppable" data-draggable-id="vaca" id="vaca" src="img/vaca shadow.png" height="100px"
+                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                <img class="droppable" data-draggable-id="ovelha" id="ovelha" src="img/ovelha shadow.png" height="100px"
                     ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
             </div>
 
@@ -43,7 +48,7 @@
     <section id="boxVerificar" class="fa droppable-elements">
         <div>
             <div>
-                <a><button id="verificar" onclick="verificarNext(9)">VERIFICAR</button></a>
+                <a><button id="verificar" onclick="verificarNext(11)">VERIFICAR</button></a>
             </div>
 
         </div>
@@ -64,8 +69,9 @@
             crossorigin="anonymous"></script>
         <script src="main.js" defer></script>
 
-        <audio src='./audio/boneca.mpeg'></audio>
-        <audio src='./audio/carro.mpeg'></audio>
+        <audio src='./audio/galinhaSong.mpeg'></audio>
+        <audio src='./audio/vacaSong.mpeg'></audio>
+        <audio src='./audio/ovelhaSong.mpeg'></audio>
         <audio src='./audio/muito_bem.mpeg'></audio>
         <audio src='./audio/tente_novamente.mpeg'></audio>
 
