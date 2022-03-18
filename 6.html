@@ -18,17 +18,17 @@
 
 <body>
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <img src="./img/menina.png" height="200px" draggable="true" id="meninaIcon" onmousedown="verificarSong(id)"
+        <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg" onmousedown="verificarSong(id, 3)"
             ondragstart="drag(event)"></img>
-        <i class="fas fa-dice-four fa-fw draggable" draggable="true" id="fourNumber" onmousedown="verificarSong(id)"
+        <i class="fas fa-dice-four fa-fw draggable" draggable="true" id="fourNumber" onmousedown="verificarSong(id, 6)"
             ondragstart="drag(event)"></i>
-            <img src="./img/menino.png" height="200px" draggable="true" id="meninoIcon" onmousedown="verificarSong(id)"
+            <img src="./img/menino.png" height="200px" draggable="true" id="meninoImg" onmousedown="verificarSong(id, 3)"
                 ondragstart="drag(event)"></img>
-        <i class="fas fa-dice-five fa-fw draggable" draggable="true" id="fiveNumber" onmousedown="verificarSong(id)"
+        <i class="fas fa-dice-five fa-fw draggable" draggable="true" id="fiveNumber" onmousedown="verificarSong(id, 6)"
             ondragstart="drag(event)"></i>
-        <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaIcon" onmousedown="verificarSong(id)"
+        <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaImg" onmousedown="verificarSong(id, 3)"
             ondragstart="drag(event)"></img>
-        <i class="fas fa-dice-six fa-fw draggable" draggable="true" id="sixNumber" onmousedown="verificarSong(id)"
+        <i class="fas fa-dice-six fa-fw draggable" draggable="true" id="sixNumber" onmousedown="verificarSong(id, 6)"
             ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">
@@ -72,9 +72,9 @@
         <script src="main.js" defer></script>
 
 
-        <audio src='./audio/fourNu.mpeg'></audio>
-        <audio src='./audio/fiveNu.mpeg'></audio>
-        <audio src='./audio/sixNu.mpeg'></audio>
+        <audio src='./audio/four.mpeg'></audio>
+        <audio src='./audio/five.mpeg'></audio>
+        <audio src='./audio/six.mpeg'></audio>
         <audio src='./audio/boneca.mpeg'></audio>
         <audio src='./audio/carro.mpeg'></audio>
         <audio src='./audio/menino.mpeg'></audio>

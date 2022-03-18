@@ -17,17 +17,17 @@
 
 <body onload="comoJogar()">
     <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmousedown="verificarSong(id)"
+        <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmousedown="verificarSong(id, 4)"
             ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber" onmousedown="verificarSong(id)"
+        <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber" onmousedown="verificarSong(id, 6)"
             ondragstart="drag(event)"></i>
-        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmousedown="verificarSong(id)"
+        <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmousedown="verificarSong(id, 4)"
             ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber" onmousedown="verificarSong(id)"
+        <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber" onmousedown="verificarSong(id, 6)"
             ondragstart="drag(event)"></i>
-        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmousedown="verificarSong(id)"
+        <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon" onmousedown="verificarSong(id, 4)"
             ondragstart="drag(event)"></i>
-        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber" onmousedown="verificarSong(id)"
+        <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber" onmousedown="verificarSong(id, 6)"
             ondragstart="drag(event)"></i>
     </section>
     <section id="divFinal" class="fa-3x droppable-elements">

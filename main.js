@@ -2,7 +2,8 @@ let next = 0;
 let lastDrag;
 let lastDragId;
 let alerta = true;
-let definicaoShadow;
+let arrayShadows = [];
+
 
 function comoJogar() {
     modal = document.createElement("div");
@@ -16,7 +17,7 @@ function comoJogar() {
 
     div = document.createElement("div");
     modal.appendChild(div);
-    
+
     h1 = document.createElement("h1");
     h1.color = "#fff";
     h1.style.textDecoration = "underline";
@@ -37,7 +38,7 @@ function comoJogar() {
     a = document.createElement("a");
     a.className = "fecharcomoJogar"
     modal.appendChild(a);
-    
+
     button = document.createElement("button");
     button.setAttribute("onclick", "fecharcomoJogar()");
     button.textContent = "Voltar";
@@ -62,53 +63,64 @@ function fecharcomoJogar() {
 function verificarBox(ev) {
     // console.log(lastDrag);
 
-    element = ev.target.id;
-    elementIcon = lastDrag;
+    elementId = ev.target.id;
+    element = lastDrag;
     elementIconId = lastDragId
 
-    console.log(element);
-    console.log(elementIconId);
+    // console.log(elementId);
+    // console.log(element);
 
-    if(elementIconId.indexOf("Number") == -1) {
-        elementComparation = retirarLetras(elementIcon.id, 4);
+    if (elementIconId.indexOf("Number") >= 0) {
+
+        elementComparation = retirarLetras(element.id, 6);
+        icon = false;
+        number = true;
+    } else if (elementIconId.indexOf("Icon") >= 0) {
+        elementComparation = retirarLetras(element.id, 4);
         icon = true;
         number = false;
     } else {
-        elementComparation = retirarLetras(elementIcon.id, 6);
+        elementComparation = retirarLetras(element.id, 3);
         icon = false;
-        number = true;
+        number = false;
     }
 
-    console.log(elementComparation);
+    // console.log(elementComparation);
 
-    if (element == elementComparation) {
+    if (elementId == elementComparation) {
 
-        console.log("MUITO BEM");
+        // console.log("MUITO BEM");
         playSong("muito_bem");
         // console.log(next);
         next += 1;
         // console.log(next);
         // console.log(element);
-        retirarIMG(element);
-        console.log(elementIcon);
-        if(icon) {
-            colocarICON(elementIcon);
-        } else if(number) {
-            colocarNumber(elementIcon);
+        // console.log(elementId);
+
+        retirarIMG(elementId);
+
+        if (icon) {
+            colocarICON(element);
+        } else if (number) {
+            colocarNumber(element);
+        } else {
+            colocarImg(element, elementId);
         }
 
-        elementIcon.setAttribute("draggable", "false");
-        elementIcon.setAttribute("ondragstart", "");
+        element.setAttribute("draggable", "false");
+        element.setAttribute("ondragstart", "");
     } else {
 
         console.log("ERRO");
         playSong("tente_novamente");
 
-        console.log(elementIcon);
-        if(icon) {
-            voltarICON(elementIcon);
-        } else if(number) {
-            voltarNumber(elementIcon);
+        console.log(element);
+        if (icon) {
+            voltarICON(element);
+        } else if (number) {
+            voltarNumber(element);
+        } else {
+            voltarImg(element);
         }
 
     }
@@ -132,26 +144,48 @@ function voltarNumber(element) {
     divInicial.appendChild(element);
 }
 function colocarICON(element) {
+
+    console.log(element);
+    divIcon = document.getElementById("divIcon");
+
+    divIcon.appendChild(element);
+
+}
+function voltarICON(element) {
+    divInicial = document.getElementById("divInicial");
+
+    divInicial.appendChild(element);
+}
+
+function colocarImg(element, elementId) {
     let img = element.src;
     // console.log(img);
 
-    // console.log(element);
     divIcon = document.getElementById("divIcon");
-    
-    // console.log(definicaoShadow);
-    
-    element = definicaoShadow.cloneNode(true);
-    // definicaoShadow = element.cloneNode(true);
+    // console.log(elementId)
+    // console.log(element); // passando tag img
+    // console.log(divIcon); // passando div
 
-    // console.log(element);
-    // console.log(definicaoShadow);
+    for (let index = 0; index < arrayShadows.length; index++) {
 
-    element.src = img;
+        console.log(arrayShadows[index]);
+        const e = arrayShadows[index].id;
+        console.log(e);
 
+        if (e == elementId) {
+            element = arrayShadows[index].cloneNode(true);
+
+            // console.log(element);
+            // console.log(divIcon);
+
+            element.src = img;
+
+        }
+    }
     divIcon.appendChild(element);
-    
+
 }
-function voltarICON(element) {
+function voltarImg(element) {
     divInicial = document.getElementById("divInicial");
 
     divInicial.appendChild(element);
@@ -165,7 +199,7 @@ function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
     lastDrag = ev.target;
     lastDragId = ev.target.id;
-    console.log(ev.target);
+    // console.log(ev.target);
 }
 
 function drop(ev) {
@@ -180,9 +214,9 @@ function playSong(element) {
     audio.play();
 }
 
-function verificarSong(element) {
+function verificarSong(element, letrasRetirar) {
     // console.log(element);
-    element = retirarLetras(element, 4);
+    element = retirarLetras(element, letrasRetirar);
     // console.log(element);
 
     playSong(element);
@@ -205,7 +239,7 @@ function verificarNext(nextPage) {
         button.textContent = "NEXT";
         button.removeAttribute("onclick");
 
-        button.parentNode.setAttribute("href", nextPage+".html");
+        button.parentNode.setAttribute("href", nextPage + ".html");
 
         alerta = false;
         playSong("muito_bem");
@@ -215,29 +249,27 @@ function verificarNext(nextPage) {
     }
 }
 function alertar() {
-    if(alerta == true) {
+    if (alerta == true) {
         alert("VERIFIQUE AS RESPOSTAS PARA IR PARA A PRÓXIMA FASE");
     }
 }
 
 function shadowImage(element, x, y, cenario) {
     // console.log(cenario);
-    url = "../img/"+cenario+".png";
+    url = "../img/" + cenario + ".png";
     // console.log(url);
 
     cenario = document.querySelector(".cenario");
     // console.log(cenario);
 
-    cenario.style.backgroundImage.url = "url("+url+")";
+    cenario.style.backgroundImage.url = "url(" + url + ")";
 
-    // console.log(element);
+    console.log(element);
+    let definicaoShadow = new Object();
+    definicaoShadow.id = element;
 
-    element = document.getElementById(element);
+    divIcon = document.getElementById(element);
 
-    // console.log(element);
-
-    // teste // divIcon = element.parentNode;
-    divIcon = element;
     console.log(divIcon);
 
     console.log(x, y);
@@ -246,5 +278,13 @@ function shadowImage(element, x, y, cenario) {
     divIcon.style.left = x;
     divIcon.style.top = y;
 
+    definicaoShadow.x = x;
+    definicaoShadow.y = y;
+
     definicaoShadow = divIcon;
+
+    arrayShadows.push(definicaoShadow);
+
+    // console.log(definicaoShadow);
+    // console.log(arrayShadows);
 }
