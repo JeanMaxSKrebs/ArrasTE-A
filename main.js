@@ -291,3 +291,65 @@ function shadowImage(element, x, y, cenario) {
     // console.log(definicaoShadow);
     // console.log(arrayShadows);
 }
+
+function pause() {
+    modal = document.createElement("div");
+    modal.id = "pause";
+    modal.ariaHidden = "true";
+
+    backModal = document.createElement("backModal");
+    backModal.className = "backModal";
+    backModal.ariaHidden = "false";
+    modal.appendChild(backModal);
+
+    div = document.createElement("div");
+    modal.appendChild(div);
+
+    h1 = document.createElement("h1");
+    h1.color = "#fff";
+    h1.style.textDecoration = "underline";
+    h1.textContent = "PAUSE";
+    div.appendChild(h1);
+
+    h3 = document.createElement("h3");
+    h3.textContent = "insira o texto aqui"
+    div.appendChild(h3);
+
+    a = document.createElement("a");
+    a.className = "buttonFases"
+    div.appendChild(a);
+
+    br = document.createElement("br");
+    a.appendChild(br);
+    br = document.createElement("br");
+    a.appendChild(br);
+
+    h2 = document.createElement("h2");
+    h2.textContent = "FASES"
+    h2.setAttribute("onclick", "verificarNext('fases')");
+    a.appendChild(h2);
+ 
+    a = document.createElement("a");
+    a.className = "fecharpause"
+    modal.appendChild(a);
+
+    button = document.createElement("button");
+    button.setAttribute("onclick", "fecharpause()");
+    button.textContent = "Voltar";
+
+    a.appendChild(button);
+
+    console.log(modal);
+    console.log(backModal);
+
+    modal.ariaHidden = "false";
+    backModal.ariaHidden = "true";
+
+    document.body.appendChild(modal);
+}
+
+function fecharpause() {
+    modal = document.getElementById("pause");
+
+    modal.parentNode.removeChild(modal);
+}
