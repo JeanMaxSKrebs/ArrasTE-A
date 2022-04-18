@@ -314,19 +314,18 @@ function pause() {
     h3 = document.createElement("h3");
     h3.textContent = "insira o texto aqui"
     div.appendChild(h3);
+    br = document.createElement("br");
+    div.appendChild(br);
+    br = document.createElement("br");
+    div.appendChild(br);
 
     a = document.createElement("a");
     a.className = "buttonFases"
     div.appendChild(a);
-
-    br = document.createElement("br");
-    a.appendChild(br);
-    br = document.createElement("br");
-    a.appendChild(br);
+    a.setAttribute("href", "fases.html");
 
     h2 = document.createElement("h2");
     h2.textContent = "FASES"
-    h2.setAttribute("onclick", "verificarNext('fases')");
     a.appendChild(h2);
  
     a = document.createElement("a");
