@@ -17,14 +17,16 @@
 </head>
 
 <body onload="shadowImage('carro', '330px', '280px', 'cenario19'),shadowImage('boneca', '200px', '300px', 'cenario19')">
-    <section id="divInicial" class="fa-8x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-        <img src="./img/carro.png" height="140px" draggable="true" id="carroImg" onmousedown="verificarSong(id, 3)"
-            ondragstart="drag(event)"></img>
-        <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaImg" onmousedown="verificarSong(id, 3)"
-            ondragstart="drag(event)"></img>
+    <section id="divInicial">
+        <div class="fa-6x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+            <img src="./img/carro.png" height="140px" draggable="true" id="carroImg" onmousedown="verificarSong(id, 3)"
+                ondragstart="drag(event)"></img>
+            <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaImg"
+                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+        </div>
     </section>
     <img src="img/cenario19.png" class="cenario">
-    <section id="divFinal" class="fa-3x droppable-elements">
+    <section id="divFinal" class="droppable-elements">
         <div id="Final">
             <div id="divIcon">
                 <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro shadow.png" height="100px"
@@ -63,8 +65,7 @@
     </section>
 
     <footer>
-        <script id="DragDropTouch"
-        src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
+        <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>

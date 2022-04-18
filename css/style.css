@@ -45,7 +45,7 @@
     top: 10px;
     left: 10px;
     position: absolute;
-    width: 20em;
+    width: 25em;
     height: 35em;
 }
 
@@ -53,8 +53,8 @@
     position: absolute;
     top: 10px;
     margin-left: 20px;
-    left: 20em;
-    width: 40em;
+    left: 25em;
+    width: 35em;
     height: 35em;
     border: 2px solid black;
 }
