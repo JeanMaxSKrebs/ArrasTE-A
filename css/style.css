@@ -54,7 +54,7 @@
     top: 10px;
     margin-left: 20px;
     left: 25em;
-    width: 35em;
+    width: 40em;
     height: 35em;
     border: 2px solid black;
 }
@@ -183,7 +183,7 @@
     left: 25em;
     float: left;
     height: 35em;
-    width: 50em;
+    width: 40em;
     border: 2px solid black;
 
     background-size: cover;  
