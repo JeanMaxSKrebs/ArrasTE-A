@@ -45,32 +45,27 @@
     top: 10px;
     left: 10px;
     position: absolute;
-    width: 25em;
-    height: 35em;
+    width: 45vw;
+    height: 70vh;
 }
 
 #divFinal {
-    position: absolute;
-    top: 10px;
-    margin-left: 20px;
-    left: 25em;
-    width: 40em;
-    height: 35em;
     border: 2px solid black;
+    top: 10px;
+    left: 50vw;
+    position: absolute;
+    width: 50vw;
+    height: 70vh;
 }
 
 #divFinal div {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 25em;
-    height: 10em;
+    justify-content: space-around;
 }
 
 #Final div div {
     width: 3em;
     height: 3em;
-    border: 0px;
     border: 2px dashed black;
 }
 

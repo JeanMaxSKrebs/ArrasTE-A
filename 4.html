@@ -18,9 +18,9 @@
 
 <body>
     <section id="divInicial">
-        <div class="fa-6x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-            <img src="./img/menina.png" height="200px" draggable="true" id="meninaIcon"
-                onmousedown="verificarSong(id, 4)" ondragstart="drag(event)"></img>
+        <div class="fa-6x draggable-elements" ondragover="allowDrop(event);">
+            <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
+                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
             <i class="fas fa-dice-four fa-fw draggable" draggable="true" id="fourNumber"
                 onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
             <img src="./img/boneca.png" height="200px" draggable="true" id="bonecaImg"
@@ -72,7 +72,6 @@
     </section>
 
     <footer>
-        <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>

@@ -61,14 +61,14 @@ function fecharcomoJogar() {
 }
 
 function verificarBox(ev) {
-    // console.log(lastDrag);
+    console.log(lastDrag);
 
     elementId = ev.target.id;
     element = lastDrag;
     elementIconId = lastDragId
 
-    // console.log(elementId);
-    // console.log(element);
+    console.log(elementId);
+    console.log(element);
 
     if (elementIconId.indexOf("Number") >= 0) {
 
@@ -85,11 +85,11 @@ function verificarBox(ev) {
         number = false;
     }
 
-    // console.log(elementComparation);
+    console.log(elementComparation);
 
     if (elementId == elementComparation) {
 
-        // console.log("MUITO BEM");
+        console.log("MUITO BEM");
         playSong("muito_bem");
         // console.log(next);
         next += 1;
@@ -206,7 +206,7 @@ function drop(ev) {
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
-    // console.log(ev.dataTransfer.getData());
+    // console.log(ev.dataTransfer.getData(data));
 }
 
 function playSong(element) {
