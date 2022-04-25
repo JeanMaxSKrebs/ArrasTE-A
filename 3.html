@@ -15,75 +15,81 @@
 </head>
 
 <body>
-    <section id="divInicial">
-        <div class="fa-6x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-            <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon" onmousedown="verificarSong(id, 4)"
-                ondragstart="drag(event)"></i>
-            <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber"
-                onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
-            <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon" onmousedown="verificarSong(id, 4)"
-                ondragstart="drag(event)"></i>
-            <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber"
-                onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
-            <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon"
-                onmousedown="verificarSong(id, 4)" ondragstart="drag(event)"></i>
-            <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber"
-                onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
-        </div>
-    </section>
-    <section id="divFinal" class="droppable-elements">
-        <div id="Final">
-            <div id="divIcon">
-                <img class="droppable" data-draggable-id="triangle" id="triangle" src="img/triangle shadow.png"
-                    height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-
-            <div id="divNumber">
-                <!-- <span>One</span> -->
-                <div class="droppable" data-draggable-id="three" id="three" ondrop="drop(event);verificarBox(event);"
-                    ondragover="allowDrop(event)">
+    <div class="container">
+        <div class="row">
+            <section id="divInicial" class=".col-">
+                <div class="draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+                    <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon"
+                        onmousedown="verificarSong(id, 4)" ondragstart="drag(event)"></i>
+                    <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber"
+                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
+                    <i class="far fa-square fa-fw draggable" draggable="true" id="squareIcon"
+                        onmousedown="verificarSong(id, 4)" ondragstart="drag(event)"></i>
+                    <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber"
+                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
+                    <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon"
+                        onmousedown="verificarSong(id, 4)" ondragstart="drag(event)"></i>
+                    <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber"
+                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
                 </div>
-            </div>
+            </section>
+            <section id="divFinal" class=".col- droppable-elements">
+                <div id="Final">
+                    <div id="divIcon">
+                        <img class="droppable" data-draggable-id="triangle" id="triangle" src="img/triangle shadow.png"
+                            height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                    </div>
+
+                    <div id="divNumber">
+                        <!-- <span>One</span> -->
+                        <div class="droppable" data-draggable-id="three" id="three"
+                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event)">
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
-    <section id="boxVerificar" class="fa droppable-elements">
-        <div>
-            <div>
-                <a><button id="verificar" onclick="verificarNext(4, 2)">VERIFICAR</button></a>
-            </div>
 
+        <div class="row">
+            <section id="boxVerificar" class="fa droppable-elements">
+                <div>
+                    <div>
+                        <a><button id="verificar" onclick="verificarNext(3, 2)">VERIFICAR</button></a>
+                    </div>
+
+                </div>
+            </section>
+            <section>
+                <div>
+                    <a>
+                        <img src="./img/pause.png" id="buttonPause" onclick="pause()">
+                        </img>
+                    </a>
+                    <a>
+                        <button id="buttoncomoJogar" onclick="comoJogar()">
+                            AJUDA
+                        </button>
+                    </a>
+                </div>
+            </section>
         </div>
-    </section>
-    <section>
-        <div>
-            <a>
-                <img src="./img/pause.png" id="buttonPause" onclick="pause()">
-                </img>
-            </a>
-            <a>
-                <button id="buttoncomoJogar" onclick="comoJogar()">
-                    AJUDA
-                </button>
-            </a>
-        </div>
-    </section>
 
-    <footer>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-        <script src="main.js" defer></script>
+        <footer>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+                crossorigin="anonymous"></script>
+            <script src="main.js" defer></script>
 
-        <audio src='./audio/one.mpeg'></audio>
-        <audio src='./audio/two.mpeg'></audio>
-        <audio src='./audio/three.mpeg'></audio>
-        <audio src='./audio/circle.mpeg'></audio>
-        <audio src='./audio/square.mpeg'></audio>
-        <audio src='./audio/triangle.mpeg'></audio>
-        <audio src='./audio/muito_bem.mpeg'></audio>
-        <audio src='./audio/tente_novamente.mpeg'></audio>
+            <audio src='./audio/one.mpeg'></audio>
+            <audio src='./audio/two.mpeg'></audio>
+            <audio src='./audio/three.mpeg'></audio>
+            <audio src='./audio/circle.mpeg'></audio>
+            <audio src='./audio/square.mpeg'></audio>
+            <audio src='./audio/triangle.mpeg'></audio>
+            <audio src='./audio/muito_bem.mpeg'></audio>
+            <audio src='./audio/tente_novamente.mpeg'></audio>
 
-    </footer>
+        </footer>
 </body>
 
 </html>

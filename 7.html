@@ -21,71 +21,72 @@
         #Final {
             padding-top: 30px;
         }
+
         #Final div {
             height: 15vh;
         }
     </style>
-    <section id="divInicial">
-        <div class="fa-6x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
-            <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
-                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-            <img src="./img/menino.png" height="200px" draggable="true" id="meninoImg"
-                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-            <img src="./img/carro.png" height="140px" draggable="true" id="carroImg" onmousedown="verificarSong(id, 3)"
-                ondragstart="drag(event)"></img>
-            <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaImg"
-                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-        </div>
-    </section>
-    <section id="divFinal" class="droppable-elements">
-        <div id="Final">
-            <div id="divIcon">
-                <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro shadow.png" height="100px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-            <div id="divIcon">
-                <img class="droppable" data-draggable-id="boneca" id="boneca" src="img/boneca shadow.png" height="100px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-            <div id="divIcon">
-
-                <img class="droppable" data-draggable-id="menina" id="menina" src="img/menina shadow.png" height="100px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-            <div id="divIcon">
-                <img class="droppable" data-draggable-id="menino" id="menino" src="img/menino shadow.png" height="100px"
-                    ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-            </div>
-
-        </div>
-        <!-- <div id="divNumber">
-                <div class="droppable" data-draggable-id="seven" id="seven" ondrop="drop(event);verificarBox(event);"
-                    ondragover="allowDrop(event)">
+    <div class="container">
+        <div class="row">
+            <section id="divInicial" class=".col-">
+                <div class="draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+                    <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                    <img src="./img/menino.png" height="200px" draggable="true" id="meninoImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                    <img src="./img/carro.png" height="140px" draggable="true" id="carroImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                    <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
                 </div>
-            </div> -->
-    </section>
-    <section id="boxVerificar" class="fa droppable-elements">
-        <div>
-            <div>
-                <a><button id="verificar" onclick="verificarNext('fases', 4)">VERIFICAR</button></a>
-            </div>
+            </section>
+            <section id="divFinal" class="droppable-elements .col-">
+                <div id="Final">
+                    <div id="divIcon">
+                        <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro shadow.png"
+                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                    </div>
+                    <div id="divIcon">
+                        <img class="droppable" data-draggable-id="boneca" id="boneca" src="img/boneca shadow.png"
+                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                    </div>
+                    <div id="divIcon">
 
-        </div>
-    </section>
-    <section>
-        <div>
-            <a>
-                <img src="./img/pause.png" id="buttonPause" onclick="pause()">
-                </img>
-            </a>
-            <a>
-                <button id="buttoncomoJogar" onclick="comoJogar()">
-                    AJUDA
-                </button>
-            </a>
-        </div>
-    </section>
+                        <img class="droppable" data-draggable-id="menina" id="menina" src="img/menina shadow.png"
+                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                    </div>
+                    <div id="divIcon">
+                        <img class="droppable" data-draggable-id="menino" id="menino" src="img/menino shadow.png"
+                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                    </div>
 
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section id="boxVerificar" class="fa droppable-elements">
+                <div>
+                    <div>
+                        <a><button id="verificar" onclick="verificarNext('fases', 4)">VERIFICAR</button></a>
+                    </div>
+
+                </div>
+            </section>
+            <section>
+                <div>
+                    <a>
+                        <img src="./img/pause.png" id="buttonPause" onclick="pause()">
+                        </img>
+                    </a>
+                    <a>
+                        <button id="buttoncomoJogar" onclick="comoJogar()">
+                            AJUDA
+                        </button>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
     <footer>
         <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
