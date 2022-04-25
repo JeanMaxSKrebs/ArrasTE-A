@@ -17,6 +17,14 @@
 </head>
 
 <body>
+    <style>
+        #Final {
+            padding-top: 30px;
+        }
+        #Final div {
+            height: 15vh;
+        }
+    </style>
     <section id="divInicial">
         <div class="fa-6x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
             <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
@@ -59,7 +67,7 @@
     <section id="boxVerificar" class="fa droppable-elements">
         <div>
             <div>
-                <a><button id="verificar" onclick="verificarNext(8)">VERIFICAR</button></a>
+                <a><button id="verificar" onclick="verificarNext('fases', 4)">VERIFICAR</button></a>
             </div>
 
         </div>

@@ -49,6 +49,12 @@
     height: 70vh;
 }
 
+#divInicial div *{
+    padding-top: 10vh;
+    padding-left: 2vw;
+    font-size: calc(4vw + 4vh);
+}
+
 #divFinal {
     border: 2px solid black;
     top: 10px;
@@ -58,14 +64,26 @@
     height: 70vh;
 }
 
-#divFinal div {
-    display: flex;
-    justify-content: space-around;
+#Final{
+    padding-top: 10vh;
+    height: 25vh;
+    width: 10vw;
+    position: relative;
+    margin: auto;
+    /* margin-left: auto;
+    margin-right: auto; */
 }
 
-#Final div div {
-    width: 3em;
-    height: 3em;
+#Final div{
+    height: 25vh;
+    width: 10vw;
+}
+#Final img{
+    height: 100px;
+}
+#Final div div{
+    width: 5rem;
+    height: 5rem;
     border: 2px dashed black;
 }
 
@@ -162,9 +180,10 @@
     color: #fff;
     position: fixed;
 
-    width: 100px;
-    left: 30em;
-    bottom: 10px;
+    /* height: 15vw; */
+    width: 10vw;
+    left: 42vw;
+    bottom: 1vh;
 }
 
 .buttonFases img {

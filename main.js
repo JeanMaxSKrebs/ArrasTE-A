@@ -84,6 +84,7 @@ function verificarBox(ev) {
         icon = false;
         number = false;
     }
+    element.setAttribute("style", "font-size: calc(4vw + 4vh)");
 
     console.log(elementComparation);
 
@@ -93,9 +94,9 @@ function verificarBox(ev) {
         playSong("muito_bem");
         // console.log(next);
         next += 1;
-        // console.log(next);
-        // console.log(element);
-        // console.log(elementId);
+        console.log(next);
+        console.log(element);
+        console.log(elementId);
 
         retirarIMG(elementId);
 
@@ -106,9 +107,8 @@ function verificarBox(ev) {
         } else {
             colocarImg(element, elementId);
         }
-
         element.setAttribute("draggable", "false");
-        element.setAttribute("ondragstart", "");
+        // console.log(element);
     } else {
 
         console.log("ERRO");
@@ -147,7 +147,6 @@ function colocarICON(element) {
 
     console.log(element);
     divIcon = document.getElementById("divIcon");
-
     divIcon.appendChild(element);
 
 }
@@ -230,12 +229,11 @@ function retirarLetras(element, qtd) {
     return newElement;
 }
 
-function verificarNext(nextPage) {
+function verificarNext(nextPage, valor) {
     console.log(nextPage);
     console.log(next);
 
-    // fazer switch case
-    if (next >= 2) {
+    if (next >= valor) {
         button = document.getElementById("verificar");
 
         button.id = "next";

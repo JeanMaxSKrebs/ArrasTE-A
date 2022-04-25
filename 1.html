@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="fa-6x draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+                <div class="draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
                     <i class="far fa-circle fa-fw draggable" draggable="true" id="circleIcon"
                         onmousedown="verificarSong(id, 4)" ondragstart="drag(event)"></i>
                     <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber"
@@ -38,7 +38,7 @@
                 <div id="Final">
                     <div id="divIcon">
                         <img class="droppable" data-draggable-id="circle" id="circle" src="img/circle shadow.png"
-                            height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                     </div>
 
                     <div id="divNumber">
@@ -55,7 +55,7 @@
     <section id="boxVerificar" class="fa droppable-elements">
         <div>
             <div>
-                <a><button id="verificar" onclick="verificarNext(2)">VERIFICAR</button></a>
+                <a><button id="verificar" onclick="verificarNext(2, 2)">VERIFICAR</button></a>
             </div>
 
         </div>
