@@ -21,13 +21,13 @@ shadowImage('ovelha', '50vw', '40vh', 'cenario1')">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);"> <img
-                        src="./img/galinha.png" height="140px" draggable="true" id="galinhaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                <div class="draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+                    <img src="./img/galinha.png" height="140px" draggable="true" id="galinhaImg"
+                        onmousedown="verificarSong(id, 3, 'som')" ondragstart="drag(event)"></img>
                     <img src="./img/vaca.png" height="140px" draggable="true" id="vacaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                        onmousedown="verificarSong(id, 3, 'som')" ondragstart="drag(event)"></img>
                     <img src="./img/ovelha.png" height="140px" draggable="true" id="ovelhaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                        onmousedown="verificarSong(id, 3, 'som')" ondragstart="drag(event)"></img>
                 </div>
             </section>
             <section id="divFinal" class="droppable-elements .col-">
@@ -44,10 +44,8 @@ shadowImage('ovelha', '50vw', '40vh', 'cenario1')">
 
                 </div>
             </section>
-
         </div>
         <div class="row">
-
             <section id="boxVerificar" class="fa droppable-elements">
                 <div>
                     <div>
@@ -72,17 +70,15 @@ shadowImage('ovelha', '50vw', '40vh', 'cenario1')">
         </div>
     </div>
 
-
     <footer>
-        <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
         <script src="main.js" defer></script>
 
-        <audio src='./audio/galinha.mpeg'></audio>
-        <audio src='./audio/vaca.mpeg'></audio>
-        <audio src='./audio/ovelha.mpeg'></audio>
+        <audio src='./audio/galinhaSong.mpeg'></audio>
+        <audio src='./audio/vacaSong.mpeg'></audio>
+        <audio src='./audio/ovelhaSong.mpeg'></audio>
         <audio src='./audio/muito_bem.mpeg'></audio>
         <audio src='./audio/tente_novamente.mpeg'></audio>
 

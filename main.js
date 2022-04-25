@@ -85,7 +85,7 @@ function verificarBox(ev) {
         number = false;
     }
     element.setAttribute("style", "font-size: calc(4vw + 4vh)");
-
+    console.log(element);
     console.log(elementComparation);
 
     if (elementId == elementComparation) {
@@ -166,17 +166,18 @@ function colocarImg(element, elementId) {
     // console.log(divIcon); // passando div
 
     for (let index = 0; index < arrayShadows.length; index++) {
-
+        
         console.log(arrayShadows[index]);
         const e = arrayShadows[index].id;
         console.log(e);
-
+        
         if (e == elementId) {
             element = arrayShadows[index].cloneNode(true);
-
+            
             // console.log(element);
             // console.log(divIcon);
-
+            
+            element.setAttribute("height", "100px");
             element.src = img;
 
         }
