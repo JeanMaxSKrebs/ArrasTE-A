@@ -54,7 +54,7 @@
 }
 
 #divFinal {
-    border: 2px solid black;
+    /* border: 2px solid black; */
     top: 25vh;
     left: 10px;
     position: absolute;
@@ -74,13 +74,11 @@
     height: 25vh;
     width: 10vw;
 }
-/* #Final img{
-    height: 100px;
-} */
+
 #Final div div{
     width: 5rem;
     height: 5rem;
-    border: 2px dashed black;
+    /* border: 2px dashed black; */
 }
 
 #boxVerificar {
@@ -195,7 +193,7 @@
     /* left: 25em; */
     /* float: left; */
     /* width: 40em; */
-    /* border: 2px solid black; */
+    border: 2px solid black;
 
     background-size: cover;  
 }
