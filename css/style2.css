@@ -45,8 +45,7 @@
     top: 10px;
     left: 10px;
     position: absolute;
-    width: 45vw;
-    height: 70vh;
+    width: 100vw;;
 }
 
 #divInicial div *{
@@ -56,30 +55,28 @@
 
 #divFinal {
     border: 2px solid black;
-    top: 10px;
-    left: 50vw;
+    top: 25vh;
+    left: 10px;
     position: absolute;
-    width: 50vw;
-    height: 70vh;
+    width: 100vw;
+    height: 60vh;
+    padding: 0;
 }
 
 #Final{
     padding-top: 10vh;
     height: 25vh;
     width: 10vw;
-    position: relative;
-    margin: auto;
-    /* margin-left: auto;
-    margin-right: auto; */
+    position: absolute;
 }
 
 #Final div{
     height: 25vh;
     width: 10vw;
 }
-#Final img{
+/* #Final img{
     height: 100px;
-}
+} */
 #Final div div{
     width: 5rem;
     height: 5rem;
@@ -191,13 +188,14 @@
 
 .cenario{
     position: absolute;
-    top: 10px;
-    margin-left: 20px;
-    left: 25em;
-    float: left;
-    height: 35em;
-    width: 40em;
-    border: 2px solid black;
+    width: 100vw;
+    height: 60vh;
+    /* top: 10px; */
+    /* margin-left: 20px; */
+    /* left: 25em; */
+    /* float: left; */
+    /* width: 40em; */
+    /* border: 2px solid black; */
 
     background-size: cover;  
 }
