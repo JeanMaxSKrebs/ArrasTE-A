@@ -20,7 +20,7 @@
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+                <div class="draggable-elements">
                     <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
                     <i class="fas fa-dice-four fa-fw draggable" draggable="true" id="fourNumber"
@@ -51,29 +51,29 @@
                 </div>
             </section>
         </div>
-    <div class="row">
-        <section id="boxVerificar" class="fa droppable-elements">
-            <div>
+        <div class="row">
+            <section id="boxVerificar" class="fa droppable-elements">
                 <div>
-                    <a><button id="verificar" onclick="verificarNext(7, 2)">VERIFICAR</button></a>
-                </div>
+                    <div>
+                        <a><button id="verificar" onclick="verificarNext(7, 2)">VERIFICAR</button></a>
+                    </div>
 
-            </div>
-        </section>
-        <section>
-            <div>
-                <a>
-                    <img src="./img/pause.png" id="buttonPause" onclick="pause()">
-                    </img>
-                </a>
-                <a>
-                    <button id="buttoncomoJogar" onclick="comoJogar()">
-                        AJUDA
-                    </button>
-                </a>
-            </div>
-        </section>
-    </div>
+                </div>
+            </section>
+            <section>
+                <div>
+                    <a>
+                        <img src="./img/pause.png" id="buttonPause" onclick="pause()">
+                        </img>
+                    </a>
+                    <a>
+                        <button id="buttoncomoJogar" onclick="comoJogar()">
+                            AJUDA
+                        </button>
+                    </a>
+                </div>
+            </section>
+        </div>
     </div>
 
     <footer>

@@ -21,7 +21,7 @@ shadowImage('galinha', '50vw', '40vh', 'cenario1')">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="draggable-elements" ondrop="drop(event);" ondragover="allowDrop(event);">
+                <div class="draggable-elements">
                     <img src="./img/galinhaEscrita.png" height="100px" draggable="true" id="galinhaImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
                     <img src="./img/vacaEscrita.png" height="100px" draggable="true" id="vacaImg"
@@ -36,8 +36,8 @@ shadowImage('galinha', '50vw', '40vh', 'cenario1')">
                     <div id="divIcon">
                         <img class="droppable" data-draggable-id="galinha" id="galinha" src="img/galinha.png"
                             height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-                        <img class="droppable" data-draggable-id="vaca" id="vaca" src="img/vaca.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="vaca" id="vaca" src="img/vaca.png" height="100px"
+                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                         <img class="droppable" data-draggable-id="ovelha" id="ovelha" src="img/ovelha.png"
                             height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                     </div>
