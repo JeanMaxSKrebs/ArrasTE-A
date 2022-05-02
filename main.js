@@ -210,8 +210,16 @@ function drop(ev) {
 }
 
 function playSong(element) {
+    console.log(element);
     audio = new Audio("audio/" + element + '.mpeg');
-    audio.play();
+    audio.play()
+    .then(() => {
+        // Audio is playing.
+        console.log("tocando");
+      })
+      .catch(error => {
+        console.log(error);
+      });
 }
 
 function verificarSong(element, letrasRetirar, tipo) {
