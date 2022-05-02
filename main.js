@@ -211,7 +211,10 @@ function drop(ev) {
 
 function playSong(element) {
     console.log(element);
-    audio = new Audio("audio/" + element + '.mpeg');
+    
+    audio = new Audio("audio/" + element);
+  
+    console.log(audio);
     audio.play()
     .then(() => {
         // Audio is playing.
@@ -226,10 +229,18 @@ function verificarSong(element, letrasRetirar, tipo) {
 
     element = retirarLetras(element, letrasRetirar);
 
-    if(tipo == 'som') {
-        element = element + 'Song';
+    if(tipo == 'mpeg') {
+        element = element + 'Song.mpeg';
+    } else if(tipo == 'mp3'){
+        element = element + 'Song.mp3';
+    } else  if(tipo == 'wav'){
+        element = element + 'Song.wav';
+    } else{
+        element = element + '.mpeg';
     }
-    console.log(element);    
+    console.log(element);
+    // exceçoes
+    
     playSong(element);
 }
 function retirarLetras(element, qtd) {
