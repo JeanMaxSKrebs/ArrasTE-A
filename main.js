@@ -84,7 +84,14 @@ function verificarBox(ev) {
         icon = false;
         number = false;
     }
+
     element.setAttribute("style", "font-size: calc(4vw + 4vh)");
+    if(elementId == "circleG" ||
+       elementId == "squareG" ||
+       elementId == "triangleG") {
+           console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa")
+        element.setAttribute("style", "font-size: calc(5vw + 5vh)");
+       }
     console.log(element);
     console.log(elementComparation);
 
