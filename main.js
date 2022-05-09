@@ -91,7 +91,7 @@ function verificarBox(ev) {
     if (elementId == elementComparation) {
 
         console.log("MUITO BEM");
-        playSong("muito_bem");
+        playSong("muito_bem.mpeg");
         // console.log(next);
         next += 1;
         console.log(next);
@@ -263,7 +263,7 @@ function verificarNext(nextPage, valor) {
         button.parentNode.setAttribute("href", nextPage + ".html");
 
         alerta = false;
-        playSong("muito_bem");
+        playSong("muito_bem.mpeg");
     } else {
         playSong("tente_novamente");
         alertar();
