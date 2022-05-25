@@ -13,40 +13,54 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-
 </head>
-
+<style>
+    #divImg div {
+        padding: 10px;
+    }
+</style>
 <body>
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="draggable-elements">
-                    <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-                    <img src="./img/menino.png" height="200px" draggable="true" id="meninoImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-                    <img src="./img/carro.png" height="140px" draggable="true" id="carroImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-                    <img src="./img/boneca.png" height="200px" draggable="true" id="bonecaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                <div id="Inicial" class="draggable-elements">
+                    <div id="divImg">
+                        <div id="position1">
+                            <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                        </div>
+                        <div id="position2">
+                            <img src="./img/menino.png" height="200px" draggable="true" id="meninoImg"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                        </div>
+                        <div id="position3">
+                            <img src="./img/carro.png" height="140px" draggable="true" id="carroImg"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                        </div>
+                        <div id="position4">
+                            <img src="./img/boneca.png" height="200px" draggable="true" id="bonecaImg"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                        </div>
+                    </div>
+
                 </div>
             </section>
-            <section id="divFinal" class="droppable-elements .col-">
+            <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <div class="position1">
+                        <div id="position5">
                             <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro shadow.png"
                                 height="140px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                         </div>
-                        <div class="position2">
+                        <div id="position6">
                             <img class="droppable" data-draggable-id="boneca" id="boneca" src="img/boneca shadow.png"
                                 height="200px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                         </div>
-                        <div class="position3">
+                        <div id="position7">
                             <img class="droppable" data-draggable-id="menina" id="menina" src="img/menina shadow.png"
                                 height="200px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                         </div>
-                        <div class="position4">
+                        <div id="position8">
                             <img class="droppable" data-draggable-id="menino" id="menino" src="img/menino shadow.png"
                                 height="200px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                         </div>

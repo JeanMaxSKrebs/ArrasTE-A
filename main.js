@@ -63,7 +63,7 @@ function fecharcomoJogar() {
 
 function verificarBox(ev) {
     //mostra elemento que vai ser colocado
-    console.log(ev.path[1]);
+    // console.log(ev.path[1]);
     //ultimo elemento clicado
     // console.log(lastDrag);
 
@@ -94,13 +94,13 @@ function verificarBox(ev) {
 
     if (elementId == elementComparation) {
 
-        console.log("MUITO BEM");
+        // console.log("MUITO BEM");
         playSong("muito_bem.mpeg");
         // console.log(next);
         next += 1;
-        console.log(next);
-        console.log(element);
-        console.log(elementId);
+        // console.log(next);
+        // console.log(element);
+        // console.log(elementId);
 
         retirarIMG(elementId);
 
@@ -115,7 +115,7 @@ function verificarBox(ev) {
 
     } else {
 
-        console.log("ERRO");
+        // console.log("ERRO");
         playSong("tente_novamente.mpeg");
 
 
@@ -180,8 +180,9 @@ function colocarImg(element, elementId, position) {
 
 }
 function voltarImg(element, parent) {
+    console.log(parent);
     position = document.getElementById(parent.id);
-
+    console.log(position);
     position.appendChild(element);
 }
 
@@ -198,7 +199,8 @@ function drag(ev) {
 
 function drop(ev) {
     lastParent = lastDrag.parentNode;
-    // console.log(lastParent);
+    console.log(lastDrag);
+    console.log(lastParent);
 
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
@@ -207,11 +209,11 @@ function drop(ev) {
 }
 
 function playSong(element) {
-    console.log(element);
+    // console.log(element);
 
     audio = new Audio("audio/" + element);
 
-    console.log(audio);
+    // console.log(audio);
     audio.play()
         .then(() => {
             // Audio is playing.
