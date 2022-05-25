@@ -79,6 +79,13 @@ body {
     /* margin-left: auto;
     margin-right: auto; */
 }
+#divImg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
 
 #Final img{
     filter: opacity(0.2) drop-shadow(0 0 0 #000);
