@@ -19,23 +19,31 @@
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="draggable-elements">
-                    <img class="draggable" draggable="true" id="circleImg" src="img/circle.png" height="150px"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
-                    <img class="draggable" draggable="true" id="squareImg" src="img/square.png" height="150px"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                <div id="Inicial" class="draggable-elements">
+                    <div id="divImg">
+                        <div id="position1">
+                            <img class="draggable" draggable="true" id="circleImg" src="img/circle.png" height="150px"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                        </div>
+                        <div id="position2">
+                            <img class="draggable" draggable="true" id="squareImg" src="img/square.png" height="150px"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <div id="position1">
-                            <img class="droppable" data-draggable-id="circle" id="circle" src="img/circle shadow.png" height="150px"
-                                ondrop="drop(event);verificarBox(event, 1);" ondragover="allowDrop(event);">
+                        <div id="position3">
+                            <img class="droppable" data-draggable-id="circle" id="circle" src="img/circle shadow.png"
+                                height="150px" ondrop="drop(event);verificarBox(event, 1);"
+                                ondragover="allowDrop(event);">
                         </div>
-                        <div id="position2">
-                            <img class="droppable" data-draggable-id="square" id="square" src="img/square shadow.png" height="150px"
-                                ondrop="drop(event);verificarBox(event, 2);" ondragover="allowDrop(event);">
+                        <div id="position4">
+                            <img class="droppable" data-draggable-id="square" id="square" src="img/square shadow.png"
+                                height="150px" ondrop="drop(event);verificarBox(event, 2);"
+                                ondragover="allowDrop(event);">
                         </div>
                     </div>
                 </div>

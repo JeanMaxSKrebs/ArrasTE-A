@@ -19,23 +19,31 @@
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="draggable-elements">
-                    <img class="draggable" draggable="true" id="triangleImg" src="img/triangle.png" height="100px"
-                        ondragstart="drag(event)">
-                    <img class="draggable" draggable="true" id="triangleGImg" src="img/triangle.png" height="200px"
-                        ondragstart="drag(event)">
+                <div id="Inicial" class="draggable-elements">
+                    <div id="divImg">
+                        <div id="position1">
+                            <img class="draggable" draggable="true" id="triangleImg" src="img/triangle.png" height="100px"
+                                ondragstart="drag(event)">
+                        </div>
+                        <div id="position2">
+                            <img class="draggable" draggable="true" id="triangleGImg" src="img/triangle.png" height="200px"
+                                ondragstart="drag(event)">
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <div id="position1">
+                        <div id="position3">
                             <img class="droppable" data-draggable-id="triangle" id="triangle" src="img/triangle shadow.png"
-                                height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                                height="100px" ondrop="drop(event);verificarBox(event, 1);"
+                                ondragover="allowDrop(event);">
                         </div>
-                        <div id="position2">
-                            <img class="droppable" data-draggable-id="triangle" id="triangleG" src="img/triangle shadow.png"
-                                height="200px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                        <div id="position4">
+                            <img class="droppable" data-draggable-id="triangleG" id="triangleG" src="img/triangle shadow.png"
+                                height="200px" ondrop="drop(event);verificarBox(event, 2);"
+                                ondragover="allowDrop(event);">
                         </div>
                     </div>
                 </div>

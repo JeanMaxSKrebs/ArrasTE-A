@@ -3,6 +3,7 @@ let lastDrag;
 let lastDragId;
 let alerta = true;
 let arrayShadows = [];
+let lastParent;
 
 
 function comoJogar() {
@@ -63,14 +64,18 @@ function fecharcomoJogar() {
 function verificarBox(ev) {
     //mostra elemento que vai ser colocado
     console.log(ev.path[1]);
-    console.log(lastDrag);
+    //ultimo elemento clicado
+    // console.log(lastDrag);
 
     elementId = ev.target.id;
     element = lastDrag;
 
-    console.log(elementId);
-    console.log(element);
-    console.log(lastDragId);
+    //drag
+    // console.log(element);
+    //drop
+    // console.log(elementId);
+    //dragId
+    // console.log(lastDragId);
 
     if (lastDragId.indexOf("Number") >= 0) {
 
@@ -83,8 +88,9 @@ function verificarBox(ev) {
         number = false;
     }
 
-    console.log(element);
-    console.log(elementComparation);
+    // console.log(element);
+    // console.log(elementId);
+    // console.log(elementComparation);
 
     if (elementId == elementComparation) {
 
@@ -106,14 +112,18 @@ function verificarBox(ev) {
         }
         element.setAttribute("draggable", "false");
         // console.log(element);
+
     } else {
 
         console.log("ERRO");
         playSong("tente_novamente.mpeg");
 
+
         console.log(element);
+        console.log(lastParent);
+
         if (img) {
-            voltarImg(element);
+            voltarImg(element, lastParent);
         } else if (number) {
             voltarNumber(element);
         }
@@ -141,7 +151,7 @@ function voltarNumber(element) {
 
 function colocarImg(element, elementId, position) {
     console.log(position);
-    
+
     let img = element.src;
     // console.log(img);
 
@@ -150,17 +160,17 @@ function colocarImg(element, elementId, position) {
     // console.log(divImg); // passando div
 
     for (let index = 0; index < arrayShadows.length; index++) {
-        
+
         console.log(arrayShadows[index]);
         const e = arrayShadows[index].id;
         console.log(e);
-        
+
         if (e == elementId) {
             element = arrayShadows[index].cloneNode(true);
-            
+
             // console.log(element);
             // console.log(divImg);
-            
+
             element.setAttribute("height", "80px");
             element.src = img;
 
@@ -169,10 +179,10 @@ function colocarImg(element, elementId, position) {
     position.appendChild(element);
 
 }
-function voltarImg(element) {
-    divInicial = document.getElementById("divInicial");
+function voltarImg(element, parent) {
+    position = document.getElementById(parent.id);
 
-    divInicial.appendChild(element);
+    position.appendChild(element);
 }
 
 function allowDrop(ev) {
@@ -187,6 +197,9 @@ function drag(ev) {
 }
 
 function drop(ev) {
+    lastParent = lastDrag.parentNode;
+    // console.log(lastParent);
+
     ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
     ev.target.appendChild(document.getElementById(data));
@@ -195,36 +208,36 @@ function drop(ev) {
 
 function playSong(element) {
     console.log(element);
-    
+
     audio = new Audio("audio/" + element);
-  
+
     console.log(audio);
     audio.play()
-    .then(() => {
-        // Audio is playing.
-        console.log("tocando");
-      })
-      .catch(error => {
-        console.log(error);
-      });
+        .then(() => {
+            // Audio is playing.
+            console.log("tocando");
+        })
+        .catch(error => {
+            console.log(error);
+        });
 }
 
 function verificarSong(element, letrasRetirar, tipo) {
 
     element = retirarLetras(element, letrasRetirar);
 
-    if(tipo == 'mpeg') {
+    if (tipo == 'mpeg') {
         element = element + 'Song.mpeg';
-    } else if(tipo == 'mp3'){
+    } else if (tipo == 'mp3') {
         element = element + 'Song.mp3';
-    } else  if(tipo == 'wav'){
+    } else if (tipo == 'wav') {
         element = element + 'Song.wav';
-    } else{
+    } else {
         element = element + '.mpeg';
     }
     console.log(element);
     // exceçoes
-    
+
     playSong(element);
 }
 function retirarLetras(element, qtd) {
@@ -329,7 +342,7 @@ function pause() {
     h2 = document.createElement("h2");
     h2.textContent = "FASES"
     a.appendChild(h2);
- 
+
     a = document.createElement("a");
     a.className = "fecharpause"
     modal.appendChild(a);
