@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Fevereiro</title>
+
+    <link rel="stylesheet" type="text/css" href="./css/style2.css">
+    </link>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+
+<body onload="shadowImage('carro', '50vw', '30vh', 'cenario19'),shadowImage('boneca', '25vw', '30vh', 'cenario19')">
+    <div class="container">
+        <div class="row">
+            <section id="divInicial" class=".col-">
+                <div class="draggable-elements">
+                    <img src="./img/carroEscrita.png" height="140px" draggable="true" id="carroImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                    <img src="./img/bonecaEscrita.png" height="140px" draggable="true" id="bonecaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                </div>
+            </section>
+            <section id="divFinal" class="droppable-elements .col-">
+                <img src="img/cenario19.png" class="cenario">
+                <div id="Final">
+                    <div id="divImg">
+                        <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro.png" height="100px"
+                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="boneca" id="boneca" src="img/boneca.png"
+                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                    </div>
+
+                </div>
+            </section>
+        </div>
+        <div class="row">
+            <section id="boxVerificar" class="fa droppable-elements">
+                <div>
+                    <div>
+                        <a><button id="verificar" onclick="verificarNext(17,2)">VERIFICAR</button></a>
+                    </div>
+
+                </div>
+            </section>
+            <section>
+                <div>
+                    <a>
+                        <img src="./img/pause.png" id="buttonPause" onclick="pause()">
+                        </img>
+                    </a>
+                    <a>
+                        <button id="buttoncomoJogar" onclick="comoJogar()">
+                            AJUDA
+                        </button>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+    <footer>
+        <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+        <script src="main.js" defer></script>
+
+        <audio src='./audio/boneca.mpeg'></audio>
+        <audio src='./audio/carro.mpeg'></audio>
+        <audio src='./audio/muito_bem.mpeg'></audio>
+        <audio src='./audio/tente_novamente.mpeg'></audio>
+
+    </footer>
+</body>
+
+</html>
