@@ -20,25 +20,32 @@
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
-                    <i class="far fa-circle fa-fw draggable" draggable="true" id="circleImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></i>
-                    <i class="fas fa-dice-one fa-fw draggable" draggable="true" id="oneNumber"
-                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
-                    <i class="far fa-square fa-fw draggable" draggable="true" id="squareImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></i>
-                    <i class="fas fa-dice-two fa-fw draggable" draggable="true" id="twoNumber"
-                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
-                    <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></i>
-                    <i class="fas fa-dice-three fa-fw draggable" draggable="true" id="threeNumber"
-                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
+
+                    <img class="draggable" draggable="true" id="circleImg" src="img/circle.png"
+                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)">
+
+                    <img class="draggable" draggable="true" id="dadoPreto1Img" src="img/dadoPreto1.png" height="150px"
+                        ondragstart="drag(event)">
+
+                    <img class="draggable" draggable="true" id="squareImg" src="img/square.png"
+                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)">
+
+                    <img class="draggable" draggable="true" id="dadoPreto2Img" src="img/dadoPreto2.png" height="150px"
+                        ondragstart="drag(event)">
+
+                    <img class="draggable" draggable="true" id="triangleImg" src="img/triangle.png"
+                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)">
+
+                    <img class="draggable" draggable="true" id="dadoPreto3Img" src="img/dadoPreto3s.png" height="150px"
+                        ondragstart="drag(event)">
+
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
                         <img class="droppable" data-draggable-id="circle" id="circle" src="img/circle shadow.png"
-                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                            ondrop="drop(event);verificarBox(event);" height="150px" ondragover="allowDrop(event);">
                     </div>
 
                     <div id="divNumber">
@@ -54,7 +61,7 @@
             <section id="boxVerificar" class="fa droppable-elements">
                 <div>
                     <div>
-                        <a><button id="verificar" onclick="verificarNext(2, 2)">VERIFICAR</button></a>
+                        <a><button id="verificar" onclick="verificarNext(2, 1)">VERIFICAR</button></a>
                     </div>
 
                 </div>

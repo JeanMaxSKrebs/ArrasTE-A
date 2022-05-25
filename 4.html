@@ -22,24 +22,23 @@
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
                     <img src="./img/menina.png" height="200px" draggable="true" id="meninaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-                    <i class="fas fa-dice-four fa-fw draggable" draggable="true" id="fourNumber"
-                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
+                    onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                    
+                    <img src="./img/menino.png" height="200px" draggable="true" id="meninoImg"
+                    onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+
                     <img src="./img/boneca.png" height="200px" draggable="true" id="bonecaImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-                    <i class="fas fa-dice-five fa-fw draggable" draggable="true" id="fiveNumber"
-                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
+
                     <img src="./img/carro.png" height="140px" draggable="true" id="carroImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-                    <i class="fas fa-dice-six fa-fw draggable" draggable="true" id="sixNumber"
-                        onmousedown="verificarSong(id, 6)" ondragstart="drag(event)"></i>
                 </div>
             </section>
             <section id="divFinal" class="droppable-elements">
                 <div id="Final">
                     <div id="divImg">
                         <img class="droppable" data-draggable-id="menina" id="menina" src="img/menina shadow.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                            height="200px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                     </div>
 
                     <div id="divNumber">
@@ -56,7 +55,7 @@
             <section id="boxVerificar" class="fa droppable-elements">
                 <div>
                     <div>
-                        <a><button id="verificar" onclick="verificarNext(5, 2)">VERIFICAR</button></a>
+                        <a><button id="verificar" onclick="verificarNext(5, 1)">VERIFICAR</button></a>
                     </div>
 
                 </div>
