@@ -20,15 +20,15 @@
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
-                    <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleIcon"
-                        onmousedown="verificarSong(id, 4)" ondragstart="drag(event)"></i>
+                    <img class="draggable" draggable="true" id="triangleImg" src="img/triangle.png"
+                    onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divIcon">
                         <img class="droppable" data-draggable-id="triangle" id="triangle" src="img/triangle shadow.png"
-                            height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                     </div>
             </section>
         </div>

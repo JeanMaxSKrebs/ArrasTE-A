@@ -61,6 +61,8 @@ function fecharcomoJogar() {
 }
 
 function verificarBox(ev) {
+    //mostra elemento que vai ser colocado
+    console.log(ev.path[1]);
     console.log(lastDrag);
 
     elementId = ev.target.id;
@@ -85,13 +87,6 @@ function verificarBox(ev) {
         number = false;
     }
 
-    element.setAttribute("style", "font-size: calc(4vw + 4vh)");
-    if(elementId == "circleG" ||
-       elementId == "squareG" ||
-       elementId == "triangleG") {
-           console.log("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAa")
-        element.setAttribute("style", "font-size: calc(5vw + 5vh)");
-       }
     console.log(element);
     console.log(elementComparation);
 
@@ -112,7 +107,8 @@ function verificarBox(ev) {
         } else if (number) {
             colocarNumber(element);
         } else {
-            colocarImg(element, elementId);
+            element.setAttribute("opacity", "0.2");
+            colocarImg(element, elementId, ev.path[1]);
         }
         element.setAttribute("draggable", "false");
         // console.log(element);
@@ -163,11 +159,12 @@ function voltarICON(element) {
     divInicial.appendChild(element);
 }
 
-function colocarImg(element, elementId) {
+function colocarImg(element, elementId, position) {
+    console.log(position);
+    
     let img = element.src;
     // console.log(img);
 
-    divIcon = document.getElementById("divIcon");
     // console.log(elementId)
     // console.log(element); // passando tag img
     // console.log(divIcon); // passando div
@@ -184,12 +181,12 @@ function colocarImg(element, elementId) {
             // console.log(element);
             // console.log(divIcon);
             
-            element.setAttribute("height", "100px");
+            element.setAttribute("height", "80px");
             element.src = img;
 
         }
     }
-    divIcon.appendChild(element);
+    position.appendChild(element);
 
 }
 function voltarImg(element) {

@@ -55,13 +55,11 @@ body {
 
 #divInicial div *{
     padding-left: 2vw;
-    font-size: calc(4vw + 4vh);
 }
 #divInicial div #circleGIcon,
 #divInicial div #squareGIcon,
 #divInicial div #triangleGIcon {
     padding-left: 2vw;
-    font-size: calc(5vw + 5vh);
 }
 
 #divFinal {
@@ -75,26 +73,15 @@ body {
 }
 
 #Final{
-    padding-top: 10vh;
+    padding-left: 10vh;
     height: 25vh;
-    width: 10vw;
-    position: relative;
     margin: auto;
     /* margin-left: auto;
     margin-right: auto; */
 }
 
-#Final div{
-    height: 25vh;
-    width: 10vw;
-}
 #Final img{
-    height: 100px;
-}
-#Final div div{
-    width: 5rem;
-    height: 5rem;
-    border: 2px dashed black;
+    filter: opacity(0.2) drop-shadow(0 0 0 #000);
 }
 
 #boxVerificar {
