@@ -16,25 +16,30 @@
 
 </head>
 
-<body onload="shadowImage('carro', '50vw', '30vh', 'cenario19'),shadowImage('boneca', '25vw', '30vh', 'cenario19')">
+<body onload="shadowImage('galinha', '30vw', '40vh', 'cenario1'), shadowImage('vaca', '20vw', '30vh', 'cenario1'), 
+shadowImage('ovelha', '65vw', '32vh', 'cenario1')">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
-                    <img src="./img/carro.png" height="140px" draggable="true" id="carroImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
-                    <img src="./img/boneca.png" height="140px" draggable="true" id="bonecaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></img>
+                    <img src="./img/galinha shadow.png" height="140px" draggable="true" id="galinhaImg"
+                        onmousedown="verificarSong(id, 3, 'mpeg')" ondragstart="drag(event)"></img>
+                    <img src="./img/ovelha shadow.png" height="140px" draggable="true" id="ovelhaImg"
+                        onmousedown="verificarSong(id, 3, 'mpeg')" ondragstart="drag(event)"></img>
+                    <img src="./img/vaca shadow.png" height="140px" draggable="true" id="vacaImg"
+                        onmousedown="verificarSong(id, 3, 'mpeg')" ondragstart="drag(event)"></img>
                 </div>
             </section>
             <section id="divFinal" class="droppable-elements .col-">
-                <img src="img/cenario19.png" class="cenario">
+                <img src="img/cenario1.png" class="cenario">
                 <div id="Final">
                     <div id="divImg">
-                        <img class="droppable" data-draggable-id="carro" id="carro" src="img/carro shadow.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-                        <img class="droppable" data-draggable-id="boneca" id="boneca" src="img/boneca shadow.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="galinha" id="galinha" src="img/galinhaSong.png"
+                            height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="vaca" id="vaca" src="img/vacaSong.png" height="50px"
+                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="ovelha" id="ovelha" src="img/ovelhaSong.png"
+                            height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
                     </div>
 
                 </div>
@@ -44,7 +49,7 @@
             <section id="boxVerificar" class="fa droppable-elements">
                 <div>
                     <div>
-                        <a><button id="verificar" onclick="verificarNext(16,2)">VERIFICAR</button></a>
+                        <a><button id="verificar" onclick="verificarNext('fases', 3)">VERIFICAR</button></a>
                     </div>
 
                 </div>
@@ -65,16 +70,15 @@
         </div>
     </div>
 
-
     <footer>
-        <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
         <script src="main.js" defer></script>
 
-        <audio src='./audio/boneca.mpeg'></audio>
-        <audio src='./audio/carro.mpeg'></audio>
+        <audio src='./audio/galinhaSong.mpeg'></audio>
+        <audio src='./audio/vacaSong.mpeg'></audio>
+        <audio src='./audio/ovelhaSong.mpeg'></audio>
         <audio src='./audio/muito_bem.mpeg'></audio>
         <audio src='./audio/tente_novamente.mpeg'></audio>
 
