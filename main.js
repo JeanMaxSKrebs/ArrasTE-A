@@ -112,12 +112,10 @@ function verificarBox(ev) {
         playSong("tente_novamente");
 
         console.log(element);
-        if (icon) {
-            voltarICON(element);
+        if (img) {
+            voltarImg(element);
         } else if (number) {
             voltarNumber(element);
-        } else {
-            voltarImg(element);
         }
 
     }

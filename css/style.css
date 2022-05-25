@@ -56,9 +56,9 @@ body {
 #divInicial div *{
     padding-left: 2vw;
 }
-#divInicial div #circleGIcon,
-#divInicial div #squareGIcon,
-#divInicial div #triangleGIcon {
+#divInicial div #circleGImg,
+#divInicial div #squareGImg,
+#divInicial div #triangleGImg {
     padding-left: 2vw;
 }
 
