@@ -211,7 +211,7 @@ function drop(ev) {
 function playSong(element) {
     // console.log(element);
 
-    audio = new Audio("audio/" + element);
+    audio = new Audio("../../audio/" + element);
 
     // console.log(audio);
     audio.play()
@@ -254,17 +254,24 @@ function verificarNext(nextPage, valor) {
 
     if (next >= valor) {
         button = document.getElementById("verificar");
-
         button.id = "next";
         button.textContent = "NEXT";
         button.removeAttribute("onclick");
 
-        button.parentNode.setAttribute("href", nextPage + ".html");
+        if(nextPage == 'fases') {
+            button.parentNode.setAttribute("href", "../../" + nextPage + ".html");
+            // console.log(button.parentNode);
+            // console.log(button);
+            // debugger;
+        } else {
+            button.parentNode.setAttribute("href", nextPage + ".html");
+        }
 
         alerta = false;
-        playSong("muito_bem.mpeg");
+        playSong("../../muito_bem.mpeg");
+        
     } else {
-        playSong("tente_novamente");
+        playSong("../../tente_novamente");
         alertar();
     }
 }
@@ -276,7 +283,7 @@ function alertar() {
 
 function shadowImage(element, x, y, cenario) {
     // console.log(cenario);
-    url = "../img/" + cenario + ".png";
+    url = ".../../img/" + cenario + ".png";
     // console.log(url);
 
     cenario = document.querySelector(".cenario");
