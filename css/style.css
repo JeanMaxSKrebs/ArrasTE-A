@@ -56,11 +56,6 @@ body {
 #divInicial div *{
     padding-left: 2vw;
 }
-#divInicial div #circleGImg,
-#divInicial div #squareGImg,
-#divInicial div #triangleGImg {
-    padding-left: 2vw;
-}
 
 #divFinal {
     border: 2px solid black;

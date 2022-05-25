@@ -20,27 +20,34 @@
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
-                    <i class="far fa-circle fa-fw draggable" draggable="true" id="circleImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></i>
-                    <i class="far fa-triangle fa-fw draggable" draggable="true" id="triangleImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"></i>
+                    <img class="draggable" draggable="true" id="circleImg" src="img/circle.png" height="150px"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
+                    <img class="draggable" draggable="true" id="triangleImg" src="img/triangle.png" height="150px"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)">
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <img class="droppable" data-draggable-id="circle" id="circle" src="img/circle shadow.png"
-                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
-                        <img class="droppable" data-draggable-id="triangle" id="triangle" src="img/triangle shadow.png"
-                            height="50px" ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                        <div id="position1">
+                            <img class="droppable" data-draggable-id="circle" id="circle" src="img/circle shadow.png"
+                                height="150px" ondrop="drop(event);verificarBox(event, 1);"
+                                ondragover="allowDrop(event);">
+                        </div>
+                        <div id="position2">
+                            <img class="droppable" data-draggable-id="triangle" id="triangle"
+                                src="img/triangle shadow.png" height="150px"
+                                ondrop="drop(event);verificarBox(event, 2);" ondragover="allowDrop(event);">
+                        </div>
                     </div>
+                </div>
             </section>
         </div>
         <div class="row">
             <section id="boxVerificar" class="fa droppable-elements">
                 <div>
                     <div>
-                        <a><button id="verificar" onclick="verificarNext(26, 1)">VERIFICAR</button></a>
+                        <a><button id="verificar" onclick="verificarNext(26, 2)">VERIFICAR</button></a>
                     </div>
 
                 </div>

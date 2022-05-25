@@ -109,7 +109,7 @@ function verificarBox(ev) {
     } else {
 
         console.log("ERRO");
-        playSong("tente_novamente");
+        playSong("tente_novamente.mpeg");
 
         console.log(element);
         if (img) {
