@@ -67,23 +67,19 @@ function verificarBox(ev) {
 
     elementId = ev.target.id;
     element = lastDrag;
-    elementIconId = lastDragId
 
     console.log(elementId);
     console.log(element);
+    console.log(lastDragId);
 
-    if (elementIconId.indexOf("Number") >= 0) {
+    if (lastDragId.indexOf("Number") >= 0) {
 
         elementComparation = retirarLetras(element.id, 6);
-        icon = false;
+        img = false;
         number = true;
-    } else if (elementIconId.indexOf("Icon") >= 0) {
-        elementComparation = retirarLetras(element.id, 4);
-        icon = true;
-        number = false;
-    } else {
+    } else if (lastDragId.indexOf("Img") >= 0) {
         elementComparation = retirarLetras(element.id, 3);
-        icon = false;
+        img = true;
         number = false;
     }
 
@@ -102,13 +98,11 @@ function verificarBox(ev) {
 
         retirarIMG(elementId);
 
-        if (icon) {
-            colocarICON(element);
-        } else if (number) {
-            colocarNumber(element);
-        } else {
+        if (img) {
             element.setAttribute("opacity", "0.2");
             colocarImg(element, elementId, ev.path[1]);
+        } else if (number) {
+            colocarNumber(element);
         }
         element.setAttribute("draggable", "false");
         // console.log(element);
@@ -146,18 +140,6 @@ function voltarNumber(element) {
 
     divInicial.appendChild(element);
 }
-function colocarICON(element) {
-
-    console.log(element);
-    divIcon = document.getElementById("divIcon");
-    divIcon.appendChild(element);
-
-}
-function voltarICON(element) {
-    divInicial = document.getElementById("divInicial");
-
-    divInicial.appendChild(element);
-}
 
 function colocarImg(element, elementId, position) {
     console.log(position);
@@ -167,7 +149,7 @@ function colocarImg(element, elementId, position) {
 
     // console.log(elementId)
     // console.log(element); // passando tag img
-    // console.log(divIcon); // passando div
+    // console.log(divImg); // passando div
 
     for (let index = 0; index < arrayShadows.length; index++) {
         
@@ -179,7 +161,7 @@ function colocarImg(element, elementId, position) {
             element = arrayShadows[index].cloneNode(true);
             
             // console.log(element);
-            // console.log(divIcon);
+            // console.log(divImg);
             
             element.setAttribute("height", "80px");
             element.src = img;
@@ -293,20 +275,20 @@ function shadowImage(element, x, y, cenario) {
     let definicaoShadow = new Object();
     definicaoShadow.id = element;
 
-    divIcon = document.getElementById(element);
+    divImg = document.getElementById(element);
 
-    console.log(divIcon);
+    console.log(divImg);
 
     console.log(x, y);
-    divIcon.style.position = 'absolute';
-    divIcon.style.display = "block";
-    divIcon.style.left = x;
-    divIcon.style.top = y;
+    divImg.style.position = 'absolute';
+    divImg.style.display = "block";
+    divImg.style.left = x;
+    divImg.style.top = y;
 
     definicaoShadow.x = x;
     definicaoShadow.y = y;
 
-    definicaoShadow = divIcon;
+    definicaoShadow = divImg;
 
     arrayShadows.push(definicaoShadow);
 
