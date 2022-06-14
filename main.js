@@ -262,12 +262,6 @@ function verificarNext(nextPage, valor) {
         
     } else {
         playSong("../../tente_novamente");
-        alertar();
-    }
-}
-function alertar() {
-    if (alerta == true) {
-        alert("VERIFIQUE AS RESPOSTAS PARA IR PARA A PRÓXIMA FASE");
     }
 }
 
