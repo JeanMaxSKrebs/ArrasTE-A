@@ -1,5 +1,5 @@
 body {
-    background-color: aliceblue;
+    background-color: #E8B87D!important;
 }
 .backModal {
     /*deixar fundo não clicavel*/
@@ -54,7 +54,7 @@ body {
     position: absolute;
     width: 45vw;
     height: 70vh;
-    background-color: #6C7A89;
+    background-color: #472D13;
 }
 
 #divFinal {
@@ -64,7 +64,7 @@ body {
     position: absolute;
     width: 50vw;
     height: 70vh;
-    background-color: #6C7A89;
+    background-color: #472D13;
 }
 
 #divImg {
