@@ -6,7 +6,7 @@ let arrayShadows = [];
 let lastParent;
 
 
-function comoJogar() {
+function comoJogar(fase) {
     modal = document.createElement("div");
     modal.id = "comoJogar";
     modal.ariaHidden = "true";
@@ -17,34 +17,24 @@ function comoJogar() {
     modal.appendChild(backModal);
 
     div = document.createElement("div");
+    if(fase == "inicio") {
+        div.style = "background-image: url('img/comojogarregras.png');";
+    } else {
+        div.style = "background-image: url('../../img/comojogarregras.png');";
+    }
+    console.log(div);
     modal.appendChild(div);
-
-    h1 = document.createElement("h1");
-    h1.color = "#fff";
-    h1.style.textDecoration = "underline";
-    h1.textContent = "COMO JOGAR";
-    div.appendChild(h1);
-
-    h3 = document.createElement("h3");
-    h3.textContent = "VOCÊ DEVE COLOCAR AS IMAGENS EM SUAS DEVIDAS SOMBRAS"
-    div.appendChild(h3);
-    h1 = document.createElement("h1");
-    h1.textContent = "E"
-    div.appendChild(h1);
-    h3 = document.createElement("h3");
-    h3.textContent = "NO QUADRADO PONTILHADO O DADO CORRESPONDENTE A PÁGINA"
-    div.appendChild(h3);
-
-
+  
     a = document.createElement("a");
     a.className = "fecharcomoJogar"
+    a.setAttribute("onclick", "fecharcomoJogar()");
+    if(fase == "inicio") {
+        a.style = "background-image: url('img/fechar.png'); background-size: cover;";
+    } else {
+        a.style = "background-image: url('../../img/fechar.png'); background-size: cover;";
+    }
+    
     modal.appendChild(a);
-
-    button = document.createElement("button");
-    button.setAttribute("onclick", "fecharcomoJogar()");
-    button.textContent = "Voltar";
-
-    a.appendChild(button);
 
     console.log(modal);
     console.log(backModal);

@@ -28,20 +28,24 @@ body {
     position: absolute;
 
     opacity: 1;
-    width: 400px;
-    height: 400px;
-    background: rgb(0, 0, 0);
+    width: 50vw;
+    height: 70vh;
+    background-size: 50vw 50vh;
+    background-repeat: no-repeat;
 }
 
 .fecharcomoJogar, .fecharpause {
-    top: 200px;
+    top: 150px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
     position: relative;
 }
 
-.fecharcomoJogar button, .fecharpause button {
+/* .fecharcomoJogar button, .fecharpause button {
    background-color: rgb(160, 0, 0);
    color: rgb(0, 0, 0);
-}
+} */
 
 #divInicial {
     border: 2px solid black;
