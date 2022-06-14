@@ -172,15 +172,6 @@ body {
     bottom: 10px;
     left: 10px;
 }
-#buttonPause {
-    color: #fff;
-    position: fixed;
-
-    /* height: 15vw; */
-    width: 10vw;
-    left: 42vw;
-    bottom: 1vh;
-}
 
 .buttonFases img {
   height: 40px;
