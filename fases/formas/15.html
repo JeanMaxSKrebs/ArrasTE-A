@@ -51,30 +51,22 @@
                     <div id="divNumber">
                         <!-- <span>One</span> -->
                         <div class="droppable" data-draggable-id="one" id="one"
-                            ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event)">
+                            ondrop="drop(event);verificarBox(event);verificarNext('fases', 1)" ondragover="allowDrop(event)">
                         </div>
                     </div>
                 </div>
             </section>
         </div>
         <div class="row">
-            <section id="boxVerificar" class="fa droppable-elements">
-                <div>
-                    <div>
-                        <a><button id="verificar" onclick="verificarNext('fases', 1)">VERIFICAR</button></a>
-                    </div>
-
-                </div>
-            </section>
             <section>
                 <div>
                     <a>
                         
                     </a>
-                    <a>
-                        <button id="buttoncomoJogar" onclick="comoJogar()">
-                            AJUDA
-                        </button>
+                    <a onclick="comoJogar()">
+                        <div id="buttoncomoJogar">
+                            <img src="../../img/comojogar.png" height="100px">
+                        </div>
                     </a>
                 </div>
             </section>

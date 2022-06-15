@@ -1,7 +1,6 @@
 let next = 0;
 let lastDrag;
 let lastDragId;
-let alerta = true;
 let arrayShadows = [];
 let lastParent;
 
@@ -241,28 +240,31 @@ function retirarLetras(element, qtd) {
 function verificarNext(nextPage, valor) {
     console.log(nextPage);
     console.log(next);
+    console.log(valor);
+    
 
     if (next >= valor) {
-        button = document.getElementById("verificar");
-        button.id = "next";
-        button.textContent = "NEXT";
-        button.removeAttribute("onclick");
 
-        if(nextPage == 'fases') {
-            button.parentNode.setAttribute("href", "../../" + nextPage + ".html");
-            // console.log(button.parentNode);
-            // console.log(button);
-            // debugger;
-        } else {
-            button.parentNode.setAttribute("href", nextPage + ".html");
-        }
+        window.location.href = nextPage + ".html";
 
-        alerta = false;
+
+            // mudaPagina(nextPage)
+            // button.parentNode.setAttribute("href", "../../" + nextPage + ".html");
+            // // console.log(button.parentNode);
+            // // console.log(button);
+            // // debugger;
+            // button.parentNode.setAttribute("href", nextPage + ".html");
+    
+
         playSong("../../muito_bem.mpeg");
         
     } else {
         playSong("../../tente_novamente");
     }
+}
+
+function mudaPagina(nextPage) {
+
 }
 
 function shadowImage(element, x, y, cenario) {

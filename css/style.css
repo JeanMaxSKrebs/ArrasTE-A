@@ -162,12 +162,6 @@ body {
 }
 
 #buttoncomoJogar {
-    color: #fff;
-    background-color: #000;
-    position: fixed;
-
-    width: 100px;
-
     position: fixed;
     bottom: 10px;
     left: 10px;

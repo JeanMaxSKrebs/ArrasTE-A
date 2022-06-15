@@ -57,32 +57,32 @@
                     <div id="divImg">
                         <div id="position7">
                             <img class="droppable" data-draggable-id="squareG" id="squareG" src="../../img/square shadow.png"
-                                height="200px" ondrop="drop(event);verificarBox(event);"
+                                height="200px" ondrop="drop(event);verificarBox(event);verificarNext(13, 6)"
                                 ondragover="allowDrop(event);">
                         </div>
                         <div id="position8">
                             <img class="droppable" data-draggable-id="circleG" id="circleG" src="../../img/circle shadow.png"
-                                height="200px" ondrop="drop(event);verificarBox(event);"
+                                height="200px" ondrop="drop(event);verificarBox(event);verificarNext(13, 6)"
                                 ondragover="allowDrop(event);">
                         </div>
                         <div id="position9">
                             <img class="droppable" data-draggable-id="triangleG" id="triangleG"
                                 src="../../img/triangle shadow.png" height="200px"
-                                ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);">
+                                ondrop="drop(event);verificarBox(event);" ondragover="allowDrop(event);verificarNext(13, 6)">
                         </div>
                         <div id="position10">
                             <img class="droppable" data-draggable-id="square" id="square" src="../../img/square shadow.png"
-                                height="100px" ondrop="drop(event);verificarBox(event);"
+                                height="100px" ondrop="drop(event);verificarBox(event);verificarNext(13, 6)"
                                 ondragover="allowDrop(event);">
                         </div>
                         <div id="position11">
                             <img class="droppable" data-draggable-id="circle" id="circle" src="../../img/circle shadow.png"
-                                height="100px" ondrop="drop(event);verificarBox(event);"
+                                height="100px" ondrop="drop(event);verificarBox(event);verificarNext(13, 6)"
                                 ondragover="allowDrop(event);">
                         </div>
                         <div id="position12">
                             <img class="droppable" data-draggable-id="triangle" id="triangle" src="../../img/triangle shadow.png"
-                                height="100px" ondrop="drop(event);verificarBox(event);"
+                                height="100px" ondrop="drop(event);verificarBox(event);verificarNext(13, 6)"
                                 ondragover="allowDrop(event);">
                         </div>
                     </div>
@@ -90,23 +90,15 @@
             </section>
         </div>
         <div class="row">
-            <section id="boxVerificar" class="fa droppable-elements">
-                <div>
-                    <div>
-                        <a><button id="verificar" onclick="verificarNext(13, 6)">VERIFICAR</button></a>
-                    </div>
-
-                </div>
-            </section>
             <section>
                 <div>
                     <a>
                         
                     </a>
-                    <a>
-                        <button id="buttoncomoJogar" onclick="comoJogar()">
-                            AJUDA
-                        </button>
+                    <a onclick="comoJogar()">
+                        <div id="buttoncomoJogar">
+                            <img src="../../img/comojogar.png" height="100px">
+                        </div>
                     </a>
                 </div>
             </section>
