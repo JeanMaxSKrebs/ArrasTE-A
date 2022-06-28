@@ -16,23 +16,23 @@ function comoJogar(fase) {
     modal.appendChild(backModal);
 
     div = document.createElement("div");
-    if(fase == "inicio") {
+    if (fase == "inicio") {
         div.style = "background-image: url('img/comojogarregras.png');";
     } else {
         div.style = "background-image: url('../../img/comojogarregras.png');";
     }
     console.log(div);
     modal.appendChild(div);
-  
+
     a = document.createElement("a");
     a.className = "fecharcomoJogar"
     a.setAttribute("onclick", "fecharcomoJogar()");
-    if(fase == "inicio") {
+    if (fase == "inicio") {
         a.style = "background-image: url('img/fechar.png'); background-size: cover;";
     } else {
         a.style = "background-image: url('../../img/fechar.png'); background-size: cover;";
     }
-    
+
     modal.appendChild(a);
 
     console.log(modal);
@@ -90,7 +90,7 @@ function verificarBox(ev) {
         // console.log(next);
         // console.log(element);
         // console.log(elementId);
-        hiddenIMG(element); 
+        hiddenIMG(element);
         // retirarIMG(elementId);
 
         if (img) {
@@ -128,7 +128,7 @@ function hiddenIMG(element) {
 // function retirarIMG(element) {
 //     console.log(element);
 //     element = document.querySelector("#" + element);
-    
+
 //     element.parentNode.removeChild(element);
 // }
 
@@ -231,34 +231,69 @@ function retirarLetras(element, qtd) {
 }
 
 function verificarNext(nextPage, valor) {
-    // console.log(nextPage);
+    console.log(nextPage);
     // console.log(next);
     // console.log(valor);
-    
 
-    if (next >= valor) {
+    if (next >= valor)
+        proximaFase(nextPage);
 
-        window.location.href = nextPage + ".html";
+}
 
+async function proximaFase(nextPage) {
 
-            // mudaPagina(nextPage)
-            // button.parentNode.setAttribute("href", "../../" + nextPage + ".html");
-            // // console.log(button.parentNode);
-            // // console.log(button);
-            // // debugger;
-            // button.parentNode.setAttribute("href", nextPage + ".html");
-    
-
-        playSong("../../muito_bem.mpeg");
-        
-    } else {
-        playSong("../../tente_novamente");
+    if (nextPage == "fases") {
+        button.parentNode.setAttribute("href", "../../" + nextPage + ".html");
+        console.log(button.parentNode);
+        console.log(button);
+        // debugger;
+        button.parentNode.setAttribute("href", nextPage + ".html");
     }
+
+    await carregamento();
+
+    await sleep(1000);
+    window.location.href = nextPage + ".html";
+
 }
 
-function mudaPagina(nextPage) {
+async function carregamento() {
 
+    div = document.createElement("div");
+    div.textAlign = "center";
+    div.style.position = "fixed";
+
+    carregamento = document.createElement("img");
+    carregamento.margin = "auto";
+    carregamento.display = "block";
+    carregamento.style.width = "600px";
+    carregamento.style.height = "150px";
+    carregamento.src = "../../img/carregando0.png";
+
+    div.style.left = '50%';
+    div.style.top = '50%';
+    div.style.marginLeft = "-325px"
+    div.style.marginTop = "-75px";
+
+    // console.log(carregamento);
+    for (let i = 1; i <= 4; i++) {
+        // console.log(carregamento);
+        // console.log(i);
+        carregamento.src = "../../img/carregando" + i + ".png";
+
+        await sleep(500);
+        div.appendChild(carregamento);
+        document.body.appendChild(div);
+    }
+
+    // console.log(div);
 }
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+
 
 function shadowImage(element, x, y, cenario) {
     // console.log(cenario);
