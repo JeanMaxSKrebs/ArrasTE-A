@@ -90,12 +90,11 @@ function verificarBox(ev) {
         // console.log(next);
         // console.log(element);
         // console.log(elementId);
-
-        retirarIMG(elementId);
+        hiddenIMG(element); 
+        // retirarIMG(elementId);
 
         if (img) {
-            element.setAttribute("opacity", "0.2");
-            colocarImg(element, elementId, ev.path[1]);
+            mudarIMG(element, ev.composedPath()[0]);
         } else if (number) {
             colocarNumber(element);
         }
@@ -108,69 +107,61 @@ function verificarBox(ev) {
         playSong("tente_novamente.mpeg");
 
 
-        console.log(element);
-        console.log(lastParent);
+        // console.log(element);
+        // console.log(lastParent);
 
-        if (img) {
-            voltarImg(element, lastParent);
-        } else if (number) {
-            voltarNumber(element);
-        }
+        // if (img) {
+        //     voltarImg(element, lastParent);
+        // } else if (number) {
+        //     voltarNumber(element);
+        // }
 
     }
 }
-function retirarIMG(element) {
-    // console.log(element);
-    element = document.querySelector("#" + element);
-    // console.log(element);
 
-    element.parentNode.removeChild(element);
+function hiddenIMG(element) {
+    console.log(element);
+
+    element.style = "visibility: hidden"
 }
+
+// function retirarIMG(element) {
+//     console.log(element);
+//     element = document.querySelector("#" + element);
+    
+//     element.parentNode.removeChild(element);
+// }
+
 function colocarNumber(element) {
     console.log(element);
     divNumber = document.getElementById("divNumber");
 
     divNumber.appendChild(element);
 }
+
 function voltarNumber(element) {
     divInicial = document.getElementById("divInicial");
 
     divInicial.appendChild(element);
 }
 
-function colocarImg(element, elementId, position) {
-    console.log(position);
+function mudarIMG(element, position) {
+
+    // console.log(position);
 
     let img = element.src;
     // console.log(img);
 
-    // console.log(elementId)
-    // console.log(element); // passando tag img
-    // console.log(divImg); // passando div
-
-    for (let index = 0; index < arrayShadows.length; index++) {
-
-        console.log(arrayShadows[index]);
-        const e = arrayShadows[index].id;
-        console.log(e);
-
-        if (e == elementId) {
-            element = arrayShadows[index].cloneNode(true);
-
-            // console.log(element);
-            // console.log(divImg);
-
-            element.setAttribute("height", "80px");
-            element.src = img;
-
-        }
-    }
-    position.appendChild(element);
-
+    position.src = img;
+    position.setAttribute("draggable", "false");
 }
+
+
+
 function voltarImg(element, parent) {
     console.log(parent);
     position = document.getElementById(parent.id);
+    console.log(element);
     console.log(position);
     position.appendChild(element);
 }
@@ -187,13 +178,15 @@ function drag(ev) {
 }
 
 function drop(ev) {
+    // debugger;
+
     lastParent = lastDrag.parentNode;
     console.log(lastDrag);
     console.log(lastParent);
 
     ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    // var data = ev.dataTransfer.getData("text");
+    // ev.target.appendChild(document.getElementById(data));
     // console.log(ev.dataTransfer.getData(data));
 }
 
@@ -238,9 +231,9 @@ function retirarLetras(element, qtd) {
 }
 
 function verificarNext(nextPage, valor) {
-    console.log(nextPage);
-    console.log(next);
-    console.log(valor);
+    // console.log(nextPage);
+    // console.log(next);
+    // console.log(valor);
     
 
     if (next >= valor) {
