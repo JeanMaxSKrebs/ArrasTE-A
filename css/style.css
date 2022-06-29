@@ -1,12 +1,14 @@
 body {
-    background-color: #E8B87D!important;
+    background-color: #E8B87D !important;
+    cursor: url('../img/cursores/aula.png'), auto;
+
 }
 
 .backModal {
     /*deixar fundo não clicavel*/
     position: fixed;
 
-    opacity:1;
+    opacity: 1;
     width: 100vw;
     height: 100vh;
     opacity: 0.5;
@@ -22,10 +24,14 @@ body {
     justify-content: center;
     align-items: center;
 }
-#comoJogar h1, #comoJogar h2, #comoJogar h3 {
+
+#comoJogar h1,
+#comoJogar h2,
+#comoJogar h3 {
     text-align: center;
     color: #fff;
 }
+
 #comoJogar div {
     position: absolute;
 
@@ -76,7 +82,7 @@ body {
     padding: 5vh;
 }
 
-#Final img{
+#Final img {
     filter: opacity(0.2) drop-shadow(0 0 0 #000);
 }
 
@@ -91,6 +97,7 @@ body {
     right: 10px;
 
 }
+
 #boxVerificar div {
     display: flex;
     flex-direction: row;
@@ -112,11 +119,11 @@ body {
     border-radius: 10px;
     background-color: rgba(220, 0, 0, 1);
     background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
     box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
     position: fixed;
     bottom: 10px;
     right: 10px;
@@ -128,7 +135,7 @@ body {
 
 #verificar:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
+        inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
 #next {
@@ -142,11 +149,11 @@ body {
     border-radius: 10px;
     background-color: rgb(0, 220, 11);
     background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
+            rgba(0, 0, 0, .2),
+            rgba(0, 0, 0, .2) 30%,
+            rgba(0, 0, 0, 0));
     box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
+        inset -2px -2px 3px rgba(0, 0, 0, .6);
 }
 
 #next:hover {
@@ -155,7 +162,7 @@ body {
 
 #next:active {
     box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
+        inset 2px 2px 3px rgba(0, 0, 0, .6);
 }
 
 #buttoncomoJogar {
@@ -165,10 +172,10 @@ body {
 }
 
 .buttonFases img {
-  height: 40px;
+    height: 40px;
 }
 
-.cenario{
+.cenario {
     position: absolute;
     top: 10px;
     margin-left: 20px;
@@ -178,5 +185,5 @@ body {
     width: 40em;
     border: 2px solid black;
 
-    background-size: cover;  
+    background-size: cover;
 }

@@ -174,9 +174,17 @@ function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
     lastDrag = ev.target;
     lastDragId = ev.target.id;
+    
     // console.log(ev.target);
 }
-
+function changeCursor(id) {
+    document.getElementById(id).style.cursor = "url('../../img/cursores/aulaagarra.png'), auto";
+    // console.log(document.querySelector('body'));
+    // body = document.querySelector('body')
+    // body.setAttribute("style", "cursor: url('../../img/cursores/aulaagarra.png'), auto");
+    // console.log(body);
+    // setAttribute("cursor", "url('../img/cursores/aula.png'), auto;");
+}
 function drop(ev) {
     // debugger;
 
