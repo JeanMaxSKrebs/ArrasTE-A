@@ -250,9 +250,7 @@ async function proximaFase(nextPage) {
         button.parentNode.setAttribute("href", nextPage + ".html");
     }
 
-    await carregamento();
-
-    await sleep(1000);
+    await sleep(1500);
     window.location.href = nextPage + ".html";
 
 }
@@ -285,6 +283,7 @@ async function carregamento() {
         div.appendChild(carregamento);
         document.body.appendChild(div);
     }
+    div.parentNode.removeChild(div);
 
     // console.log(div);
 }
