@@ -233,7 +233,7 @@ function retirarLetras(element, qtd) {
 function verificarNext(nextPage, valor) {
     console.log(nextPage);
     // console.log(next);
-    // console.log(valor);
+    console.log(valor);
 
     if (next >= valor)
         proximaFase(nextPage);
@@ -241,13 +241,11 @@ function verificarNext(nextPage, valor) {
 }
 
 async function proximaFase(nextPage) {
-
+    
     if (nextPage == "fases") {
-        button.parentNode.setAttribute("href", "../../" + nextPage + ".html");
-        console.log(button.parentNode);
-        console.log(button);
         // debugger;
-        button.parentNode.setAttribute("href", nextPage + ".html");
+        window.location.href = "../../" + nextPage + ".html";
+
     }
 
     await sleep(1500);
@@ -255,7 +253,7 @@ async function proximaFase(nextPage) {
 
 }
 
-async function carregamento() {
+async function carregamento(fases) {
 
     div = document.createElement("div");
     div.textAlign = "center";
@@ -277,7 +275,10 @@ async function carregamento() {
     for (let i = 1; i <= 4; i++) {
         // console.log(carregamento);
         // console.log(i);
-        carregamento.src = "../../img/carregando" + i + ".png";
+        if(fases)
+            carregamento.src = "./img/carregando" + i + ".png";
+        else
+            carregamento.src = "../../img/carregando" + i + ".png";
 
         await sleep(500);
         div.appendChild(carregamento);

@@ -26,22 +26,21 @@
 
     .container {
         position: absolute;
-        left: 15vw;
-        right: 15vw;
+        left: 5vw;
+        right: 5vw;
         top: 5vh;
-        width: 70vw;
-        height: 100vh;
+        width: 90vw;
         background: #3d2b01;
-        display: flex;
-        flex-direction: row;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
         padding: 5vh;
     }
 
-    .img-fluid {
-        max-width: 80%;
+    @media only screen and (min-width: 992px) {
+        .img-fluid {
+            max-width: 70%;
+        }
     }
 
     .row {
@@ -62,37 +61,36 @@
     }
 </style>
 
-<body>
+<body onload="carregamento(true)">
     <div class="container">
         <div class="row">
-            <div class="col-4 box">
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
                 <a href="./fases/formas/1.html">
                     <!-- formas -->
                     <img class="img-fluid" src="img/fase 1.png" alt="" srcset="">
                 </a>
             </div>
-            <div class="col-4 box">
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
                 <a href="./fases/fazenda/1.html">
                     <!-- fazenda -->
                     <img class="img-fluid" src="img/fase 2.png" alt="" srcset="">
                 </a>
             </div>
-            <div class="col-4 box">
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
                 <!-- 36 37 38 39 40 - 41 42 43 44 45 - 46 47 48 49 50-->
                 <a href="./fases/cidade/1.html">
                     <!-- cidade -->
                     <img class="img-fluid" src="img/fase 3.png" alt="" srcset="">
                 </a>
             </div>
-
-            <div class="col-4 box">
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
                 <!-- 51-75 -->
                 <a href="./fases/serraMontanhas/1.html">
                     <!-- serra e montanhas -->
                     <img class="img-fluid" src="img/fase 4.png" alt="" srcset="">
                 </a>
             </div>
-            <div class="col-4 box">
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
                 <!-- 1 2 3 4 5 6 7 8-->
                 <!-- 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50-->
                 <a href="./fases/objetos/1.html">
@@ -100,41 +98,38 @@
                     <img class="img-fluid" src="img/fase 5.png" alt="" srcset="">
                 </a>
             </div>
-            <div class="col-4 box">
-                <a href="./fases.html">
-                    <!-- invisivel -->
-                    <!-- <img class="img-fluid" src="img/fase 6.png" alt="" srcset=""> -->
-                </a>
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
             </div>
-        </div>
-        <div class="row">
-            <div class="boxOpcoes col">
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-sm-6 box">
                 <div>
-                  <a href="creditos.html">
-                    <img src="img/creditos.png" width="200px" height="100px">
-                  </a>
-                </div>
-                
-                <br>
-                <br>
-                
-                <div>
-                  <a onclick="comoJogar('inicio')">
-                    <img src="img/comojogar.png" width="200px" height="100px">
-                  </a>
-                </div>
-          
-              </div>
-            <!-- <div class="col">
-                <div>
-                    <a href="loja.html">
-                        <button class="loja">
-                            <h3>LOJA</h3>
-                        </button>
+                    <a href="creditos.html">
+                        <img class="img-fluid" src="img/creditos.png">
                     </a>
                 </div>
-            </div> -->
+
+                <div>
+                    <a onclick="comoJogar('inicio')">
+                        <img class="img-fluid" src="img/comojogar.png">
+                    </a>
+                </div>
+            </div>
+            <!-- <div class="col">
+                    <div>
+                        <a href="loja.html">
+                            <button class="loja">
+                                <h3>LOJA</h3>
+                            </button>
+                        </a>
+                    </div>
+                </div> -->
+
         </div>
+    </div>
+    </div>
+
     </div>
 
     <footer>
