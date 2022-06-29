@@ -52,16 +52,22 @@ function comoJogar(fase) {
     video.width = "740";
 
     source = document.createElement("source");
-    source.src = "../../video/comoJogar.mp4";
+    a = document.createElement("a");
+    a.className = "fecharvideo"
+    a.setAttribute("onclick", "fecharvideo()");
+    if (fase == "inicio") {
+        source.src = "video/comoJogar.mp4";
+        a.style = "background-image: url('img/fechar.png'); background-size: cover;";
+
+    } else {
+        source.src = "../../video/comoJogar.mp4";
+        a.style = "background-image: url('../../img/fechar.png'); background-size: cover;";
+    }
     source.type = "video/mp4";
 
     // console.log(div);
     // console.log(source);
 
-    a = document.createElement("a");
-    a.className = "fecharvideo"
-    a.setAttribute("onclick", "fecharvideo()");
-    a.style = "background-image: url('../../img/fechar.png'); background-size: cover;";
 
     // modal.appendChild(a);
 
