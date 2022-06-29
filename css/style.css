@@ -32,7 +32,7 @@ body {
     color: #fff;
 }
 
-#comoJogar div {
+#comoJogar #img {
     position: absolute;
 
     opacity: 1;
@@ -40,14 +40,28 @@ body {
     height: 70vh;
     background-size: 50vw 50vh;
     background-repeat: no-repeat;
+    z-index: 0;
+}
+#comoJogar #videocomoJogar {
+    z-index: 1;
 }
 
 .fecharcomoJogar {
-    top: 150px;
-    right: 25px;
+    position: absolute;
+
+    top: 70vh;
+    left: 45vw;
     width: 100px;
     height: 100px;
-    position: relative;
+}
+
+.fecharvideo {
+    position: fixed;
+
+    bottom: 10px;
+    left: 45vw;
+    width: 100px;
+    height: 100px;
 }
 
 #divInicial {

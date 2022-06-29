@@ -16,6 +16,7 @@ function comoJogar(fase) {
     modal.appendChild(backModal);
 
     div = document.createElement("div");
+    div.id = "img";
     if (fase == "inicio") {
         div.style = "background-image: url('img/comojogarregras.png');";
     } else {
@@ -41,7 +42,41 @@ function comoJogar(fase) {
     modal.ariaHidden = "false";
     backModal.ariaHidden = "true";
 
+    div = document.createElement('div');
+    div.id = "videocomoJogar"
+    div.setAttribute("style", "border: 25px solid black;");
+    video = document.createElement("video");
+
+    video.controls = true;
+    video.height = "450";
+    video.width = "740";
+
+    source = document.createElement("source");
+    source.src = "../../video/comoJogar.mp4";
+    source.type = "video/mp4";
+
+    // console.log(div);
+    // console.log(source);
+
+    a = document.createElement("a");
+    a.className = "fecharvideo"
+    a.setAttribute("onclick", "fecharvideo()");
+    a.style = "background-image: url('../../img/fechar.png'); background-size: cover;";
+
+    // modal.appendChild(a);
+
+    div.appendChild(a);
+    video.appendChild(source);
+    div.appendChild(video);
+    modal.appendChild(div);
+
     document.body.appendChild(modal);
+}
+
+function fecharvideo() {
+    div = document.getElementById("videocomoJogar");
+    console.log(div);
+    div.parentNode.removeChild(div);
 }
 
 function fecharcomoJogar() {
