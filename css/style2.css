@@ -1,3 +1,7 @@
+body {
+    background-color: #E8B87D!important;
+}
+
 .backModal {
     /*deixar fundo não clicavel*/
     position: fixed;
@@ -8,7 +12,8 @@
     opacity: 0.5;
     background: #6C7A89;
 }
-#comoJogar, #pause {
+
+#comoJogar {
     position: absolute;
     width: 100vw;
     height: 100vh;
@@ -17,27 +22,28 @@
     justify-content: center;
     align-items: center;
 }
-#comoJogar h1, #comoJogar h2, #comoJogar h3, #pause h1, #pause h2, #pause h3 {
+
+#comoJogar h1, #comoJogar h2, #comoJogar h3 {
     text-align: center;
     color: #fff;
 }
-#comoJogar div, #pause div {
+
+#comoJogar div {
     position: absolute;
 
     opacity: 1;
-    width: 400px;
-    height: 400px;
-    background: rgb(0, 0, 0);
+    width: 50vw;
+    height: 70vh;
+    background-size: 50vw 50vh;
+    background-repeat: no-repeat;
 }
 
-.fecharcomoJogar, .fecharpause {
-    top: 200px;
+.fecharcomoJogar {
+    top: 150px;
+    right: 25px;
+    width: 100px;
+    height: 100px;
     position: relative;
-}
-
-.fecharcomoJogar button, .fecharpause button {
-   background-color: rgb(160, 0, 0);
-   color: rgb(0, 0, 0);
 }
 
 #divInicial {
@@ -159,12 +165,6 @@
 }
 
 #buttoncomoJogar {
-    color: #fff;
-    background-color: #000;
-    position: fixed;
-
-    width: 100px;
-
     position: fixed;
     bottom: 10px;
     left: 10px;
