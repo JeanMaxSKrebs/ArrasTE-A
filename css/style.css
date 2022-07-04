@@ -3,7 +3,7 @@ body {
     cursor: url('../img/cursores/aula.png'), auto;
     width: 100vw;
     height: 100vh;
-
+    user-select: none;
 }
 
 img {
