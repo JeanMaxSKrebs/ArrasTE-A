@@ -15,46 +15,44 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body onload="carregamento()">
+<body onload = "carregamento()">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div id="Inicial" class="draggable-elements">
-                    <div id="divImg">
-                        <div id="position1">
-                            <img class="draggable" draggable="true" id="circleImg" src="../../img/circle.png"
-                                height="100px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
-                        </div>
-                        <div id="position2">
-                            <img class="draggable" draggable="true" id="circleGImg" src="../../img/circle.png"
-                                height="200px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
-                        </div>
-                    </div>
+                <div class="draggable-elements">
+
+                    <img class="draggable" draggable="true" id="circleImg" src="../../img/circle.png"
+                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+
+                    <img class="draggable" draggable="true" id="dadoPreto1Img" src="../../img/dadoPreto1.png" height="150px"
+                        ondragstart="drag(event)" onmouseover="changeCursor(id)">
+
+                    <img class="draggable" draggable="true" id="squareImg" src="../../img/square.png"
+                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+
+                    <img class="draggable" draggable="true" id="dadoPreto2Img" src="../../img/dadoPreto2.png" height="150px"
+                        ondragstart="drag(event)" onmouseover="changeCursor(id)">
+
+                    <img class="draggable" draggable="true" id="triangleImg" src="../../img/triangle.png"
+                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+
+                    <img class="draggable" draggable="true" id="dadoPreto3Img" src="../../img/dadoPreto3.png" height="150px"
+                        ondragstart="drag(event)" onmouseover="changeCursor(id)">
+
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <div id="position3">
-                            <img class="droppable" data-draggable-id="circleG" id="circleG"
-                                src="../../img/circle shadow.png" height="200px"
-                                ondrop="drop(event);verificarBox(event);verificarNext(9, 2)"
-                                ondragover="allowDrop(event);">
-                        </div>
-                        <div id="position4">
-                            <img class="droppable" data-draggable-id="circle" id="circle"
-                                src="../../img/circle shadow.png" height="100px"
-                                ondrop="drop(event);verificarBox(event);verificarNext(9, 2)"
-                                ondragover="allowDrop(event);">
-                        </div>
-
+                        <img class="droppable" data-draggable-id="circle" id="circle" src="../../img/circle shadow.png"
+                            ondrop="drop(event);verificarBox(event);verificarNext(14, 1)" height="150px" ondragover="allowDrop(event);">
                     </div>
                 </div>
             </section>
         </div>
         <div class="row">
             <section>
-                <div id="buttoncomoJogar">
+                 <div id="buttoncomoJogar">
                     <a href="../../fases.html">
                         <img src="../../img/bt_06.png" height="150px">
                     </a>

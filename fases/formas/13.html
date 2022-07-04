@@ -19,33 +19,31 @@
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
-                <div class="draggable-elements">
-
-                    <img class="draggable" draggable="true" id="circleImg" src="../../img/circle.png"
-                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
-
-                    <img class="draggable" draggable="true" id="dadoPreto1Img" src="../../img/dadoPreto1.png" height="150px"
-                        ondragstart="drag(event)" onmouseover="changeCursor(id)">
-
-                    <img class="draggable" draggable="true" id="squareImg" src="../../img/square.png"
-                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
-
-                    <img class="draggable" draggable="true" id="dadoPreto2Img" src="../../img/dadoPreto2.png" height="150px"
-                        ondragstart="drag(event)" onmouseover="changeCursor(id)">
-
-                    <img class="draggable" draggable="true" id="triangleImg" src="../../img/triangle.png"
-                        onmousedown="verificarSong(id, 3)" height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
-
-                    <img class="draggable" draggable="true" id="dadoPreto3Img" src="../../img/dadoPreto3.png" height="150px"
-                        ondragstart="drag(event)" onmouseover="changeCursor(id)">
-
+                <div id="Inicial" class="draggable-elements">
+                    <div id="divImg">
+                        <div id="position3">
+                            <img class="draggable" draggable="true" id="circleImg" src="../../img/baldevermelho.png" height="150px"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                        </div>
+                        <div id="position3">
+                            <img class="draggable" draggable="true" id="circleImg" src="../../img/baldeamarelo.png" height="150px"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                        </div>
+                        <div id="position3">
+                            <img class="draggable" draggable="true" id="circleImg" src="../../img/baldeazul.png" height="150px"
+                                onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                        </div>
+                    </div>
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <img class="droppable" data-draggable-id="circle" id="circle" src="../../img/circle shadow.png"
-                            ondrop="drop(event);verificarBox(event);verificarNext(14, 1)" height="150px" ondragover="allowDrop(event);">
+                        <div id="position4">
+                            <img class="droppable" data-draggable-id="square" id="square" src="../../img/macasemcor.png"
+                                height="150px" ondrop="drop(event);verificarBox(event);verificarNext(8, 1)"
+                                ondragover="allowDrop(event);">
+                        </div>
                     </div>
                 </div>
             </section>
@@ -68,6 +66,7 @@
 
 
     <footer>
+        <a href="https://br.freepik.com/fotos-vetores-gratis/crianca">Criança vetor criado por brgfx - br.freepik.com</a>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
