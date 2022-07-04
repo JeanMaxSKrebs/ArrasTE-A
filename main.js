@@ -329,7 +329,7 @@ async function carregamento(fases) {
         else
             carregamento.src = "../../img/carregando" + i + ".png";
 
-        await sleep(500);
+        await sleep(200);
         div.appendChild(carregamento);
         document.body.appendChild(div);
     }

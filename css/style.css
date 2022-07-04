@@ -1,7 +1,17 @@
 body {
     background-color: #E8B87D !important;
     cursor: url('../img/cursores/aula.png'), auto;
+    width: 100vw;
+    height: 100vh;
 
+}
+
+img {
+    cursor: url('../img/cursores/aula.png'), auto;
+}
+
+a {
+    cursor: url('../img/cursores/aula.png'), auto;
 }
 
 .backModal {
