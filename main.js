@@ -112,16 +112,38 @@ function verificarBox(ev) {
         elementComparation = retirarLetras(element.id, 6);
         img = false;
         number = true;
+        cor = false;
+
     } else if (lastDragId.indexOf("Img") >= 0) {
         elementComparation = retirarLetras(element.id, 3);
         img = true;
         number = false;
+        cor = false;
+
+    } else if (lastDragId.indexOf("cor") >= 0) {
+        elementComparation = retirarLetras(element.id, 3);
+        img = false;
+        number = false;
+        cor = true;
     }
 
-    // console.log(element);
+    // console.log(cor)
+    console.log(element);
     // console.log(elementId);
     // console.log(elementComparation);
+    console.log("CACETE")
+    if (cor) {
 
+        verificar = bancodedados(elementComparation, elementId)
+        
+        console.log(verificar);
+        if (verificar) {
+            elementId = elementComparation
+            
+            pintarIMG(verificar, ev.composedPath()[0]);
+        }
+
+    }
     if (elementId == elementComparation) {
 
         // console.log("MUITO BEM");
@@ -196,7 +218,14 @@ function mudarIMG(element, position) {
     position.src = img;
     position.setAttribute("draggable", "false");
 }
+function pintarIMG(nome, position) {
 
+    console.log(nome)
+   
+
+    position.src = "../../img/" + nome + ".png";
+    position.setAttribute("draggable", "false");
+}
 
 
 function voltarImg(element, parent) {
@@ -215,7 +244,7 @@ function drag(ev) {
     ev.dataTransfer.setData("text", ev.target.id);
     lastDrag = ev.target;
     lastDragId = ev.target.id;
-    
+
     // console.log(ev.target);
 }
 function changeCursor(id) {
@@ -290,7 +319,7 @@ function verificarNext(nextPage, valor) {
 }
 
 async function proximaFase(nextPage) {
-    
+
     if (nextPage == "fases") {
         // debugger;
         window.location.href = "../../" + nextPage + ".html";
@@ -324,7 +353,7 @@ async function carregamento(fases) {
     for (let i = 1; i <= 4; i++) {
         // console.log(carregamento);
         // console.log(i);
-        if(fases)
+        if (fases)
             carregamento.src = "./img/carregando" + i + ".png";
         else
             carregamento.src = "../../img/carregando" + i + ".png";

@@ -1,5 +1,5 @@
 body {
-    background-color: #E8B87D !important;
+    background-color: #472D13 !important;
     cursor: url('../img/cursores/aula.png'), auto;
     width: 100vw;
     height: 100vh;
@@ -12,6 +12,7 @@ img {
 
 a {
     cursor: url('../img/cursores/aula.png'), auto;
+    text-decoration: none !important;
 }
 
 .backModal {
@@ -81,7 +82,7 @@ a {
     position: absolute;
     width: 45vw;
     height: 70vh;
-    background-color: #472D13;
+    background-color: #E8B87D;
 }
 
 #divFinal {
@@ -91,7 +92,7 @@ a {
     position: absolute;
     width: 50vw;
     height: 70vh;
-    background-color: #472D13;
+    background-color: #E8B87D;
 }
 
 #divImg {
@@ -107,7 +108,7 @@ a {
 }
 
 #Final img {
-    filter: opacity(0.2) drop-shadow(0 0 0 #000);
+    /* filter: opacity(0.2) drop-shadow(0 0 0 #000); */
 }
 
 #boxVerificar {
