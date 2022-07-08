@@ -8,6 +8,9 @@ function bancodedados(cor, valor) {
                 case "macasemcor":
                     retorno = 'maca';
                     break;
+                case "cubovermelho":
+                    retorno = 'cubovermelho';
+                    break;
 
                 default:
                     break;
@@ -16,15 +19,25 @@ function bancodedados(cor, valor) {
 
         case "baldeazul":
             switch (valor) {
-                case "":
-                    break;
+                case "cuboazul":
+                    retorno = 'cuboazul';
+                break;
 
                 default:
                     break;
             }
 
+            break;
 
+        case "baldeamarelo":
+            switch (valor) {
+                case "cuboamarelo":
+                    retorno = 'cuboamarelo';
+                break;
 
+                default:
+                    break;
+            }
             break;
 
         default:
