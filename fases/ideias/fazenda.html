@@ -16,30 +16,30 @@
 
 </head>
 
-<body onload = "carregamento();shadowImage('galinha', '30vw', '40vh', 'cenario1'), shadowImage('vaca', '20vw', '30vh', 'cenario1'), 
-shadowImage('ovelha', '65vw', '32vh', 'cenario1')">
+<body onload = "carregamento();shadowImage('vaca', '80vw', '40vh', 'cenario1'), shadowImage('ovelha', '30vw', '30vh', 'cenario1'), 
+shadowImage('galinha', '50vw', '40vh', 'cenario1')">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
-                    <img src="../../img/galinha shadow.png" height="140px" draggable="true" id="galinhaImg"
-                        onmousedown="verificarSong(id, 3, 'mpeg')" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
-                    <img src="../../img/ovelha shadow.png" height="140px" draggable="true" id="ovelhaImg"
-                        onmousedown="verificarSong(id, 3, 'mpeg')" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
-                    <img src="../../img/vaca shadow.png" height="140px" draggable="true" id="vacaImg"
-                        onmousedown="verificarSong(id, 3, 'mpeg')" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
+                    <img src="../../img/galinhaEscrita.png" height="150px" draggable="true" id="galinhaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
+                    <img src="../../img/vacaEscrita.png" height="150px" draggable="true" id="vacaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
+                    <img src="../../img/ovelhaEscrita.png" height="150px" draggable="true" id="ovelhaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
                 </div>
             </section>
             <section id="divFinal" class="droppable-elements .col-">
                 <img src="../../img/cenario1.png" class="cenario">
                 <div id="Final">
                     <div id="divImg">
-                        <img class="droppable" data-draggable-id="galinha" id="galinha" src="../../img/galinhaSong.png"
-                            height="50px" ondrop="drop(event);verificarBox(event);verificarNext('fases', 3)" ondragover="allowDrop(event);">
-                        <img class="droppable" data-draggable-id="vaca" id="vaca" src="../../img/vacaSong.png" height="50px"
-                            ondrop="drop(event);verificarBox(event);verificarNext('fases', 3)" ondragover="allowDrop(event);">
-                        <img class="droppable" data-draggable-id="ovelha" id="ovelha" src="../../img/ovelhaSong.png"
-                            height="50px" ondrop="drop(event);verificarBox(event);verificarNext('fases', 3)" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="galinha" id="galinha" src="../../img/galinha.png"
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(5, 3)" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="vaca" id="vaca" src="../../img/vaca.png" height="150px"
+                            ondrop="drop(event);verificarBox(event);verificarNext(5, 3)" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="ovelha" id="ovelha" src="../../img/ovelha.png"
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(5, 3)" ondragover="allowDrop(event);">
                     </div>
 
                 </div>
@@ -49,7 +49,7 @@ shadowImage('ovelha', '65vw', '32vh', 'cenario1')">
             <section>
                  <div id="buttoncomoJogar">
                     <a href="../../fases.html">
-                        <img src="../../img/bt_06.png" height="150px">
+                        <img src="../../img/bt_06.png" height="100px">
                     </a>
 
                     <a onclick="comoJogar()">
@@ -66,9 +66,9 @@ shadowImage('ovelha', '65vw', '32vh', 'cenario1')">
             crossorigin="anonymous"></script>
         <script src="../../main.js" defer></script>
 
-        <audio src='../../audio/galinhaSong.mpeg'></audio>
-        <audio src='../../audio/vacaSong.mpeg'></audio>
-        <audio src='../../audio/ovelhaSong.mpeg'></audio>
+        <audio src='../../audio/galinha.mpeg'></audio>
+        <audio src='../../audio/vaca.mpeg'></audio>
+        <audio src='../../audio/ovelha.mpeg'></audio>
         <audio src='../../audio/muito_bem.mpeg'></audio>
         <audio src='../../audio/tente_novamente.mpeg'></audio>
 

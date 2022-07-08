@@ -16,17 +16,17 @@
 
 </head>
 
-<body onload = "carregamento();shadowImage('galinha', '80vw', '40vh', 'cenario1'), shadowImage('vaca', '30vw', '30vh', 'cenario1'), 
-shadowImage('ovelha', '50vw', '40vh', 'cenario1')">
+<body onload = "carregamento();shadowImage('galinha', '80vw', '30vh', 'cenario1'), shadowImage('vaca', '30vw', '30vh', 'cenario1'), 
+shadowImage('ovelha', '50vw', '35vh', 'cenario1')">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
-                    <img src="../../img/galinha.png" height="140px" draggable="true" id="galinhaImg"
+                    <img src="../../img/galinha.png" height="150px" draggable="true" id="galinhaImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
-                    <img src="../../img/vaca.png" height="140px" draggable="true" id="vacaImg"
+                    <img src="../../img/vaca.png" height="150px" draggable="true" id="vacaImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
-                    <img src="../../img/ovelha.png" height="140px" draggable="true" id="ovelhaImg"
+                    <img src="../../img/ovelha.png" height="150px" draggable="true" id="ovelhaImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
                 </div>
             </section>
@@ -35,11 +35,11 @@ shadowImage('ovelha', '50vw', '40vh', 'cenario1')">
                 <div id="Final">
                     <div id="divImg">
                         <img class="droppable" data-draggable-id="galinha" id="galinha" src="../../img/galinha shadow.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);verificarNext(2, 3);" ondragover="allowDrop(event);">
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(2, 3);" ondragover="allowDrop(event);">
                         <img class="droppable" data-draggable-id="vaca" id="vaca" src="../../img/vaca shadow.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);verificarNext(2, 3);" ondragover="allowDrop(event);">
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(2, 3);" ondragover="allowDrop(event);">
                         <img class="droppable" data-draggable-id="ovelha" id="ovelha" src="../../img/ovelha shadow.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);verificarNext(2, 3);" ondragover="allowDrop(event);">
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(2, 3);" ondragover="allowDrop(event);">
                     </div>
 
                 </div>
@@ -50,7 +50,7 @@ shadowImage('ovelha', '50vw', '40vh', 'cenario1')">
             <section>
                  <div id="buttoncomoJogar">
                     <a href="../../fases.html">
-                        <img src="../../img/bt_06.png" height="150px">
+                        <img src="../../img/bt_06.png" height="100px">
                     </a>
 
                     <a onclick="comoJogar()">

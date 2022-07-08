@@ -1,5 +1,5 @@
 body {
-    background-color: #E8B87D!important;
+    background-color: #E8B87D !important;
 }
 
 .backModal {
@@ -51,7 +51,8 @@ body {
     top: 10px;
     left: 10px;
     position: absolute;
-    width: 100vw;;
+    width: 100vw;
+    background-color: #472D13;
 }
 
 #divInicial div *{
