@@ -59,6 +59,18 @@ function comoJogar(fase) {
         source.src = "video/comoJogar.mp4";
         a.style = "background-image: url('img/fechar.png'); background-size: cover;";
 
+    } else if (fase == "fazenda") {
+        source.src = "video/comoJogarfazenda.mp4";
+        a.style = "background-image: url('img/fechar.png'); background-size: cover;";
+
+    } else if (fase == "cores") {
+        source.src = "video/comoJogarcores.mp4";
+        a.style = "background-image: url('img/fechar.png'); background-size: cover;";
+
+    } else if (fase == "frutas") {
+        source.src = "video/comoJogarfruta.mp4";
+        a.style = "background-image: url('img/fechar.png'); background-size: cover;";
+
     } else {
         source.src = "../../video/comoJogar.mp4";
         a.style = "background-image: url('../../img/fechar.png'); background-size: cover;";
