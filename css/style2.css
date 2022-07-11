@@ -45,6 +45,13 @@ body {
     height: 100px;
     position: relative;
 }
+.fecharvideo {
+    position: fixed;
+    bottom: 10px;
+    left: 45vw;
+    width: 100px;
+    height: 100px;
+}
 
 #divInicial {
     border: 2px solid black;
