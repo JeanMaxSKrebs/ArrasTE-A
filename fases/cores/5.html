@@ -26,8 +26,9 @@
                                 height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
                         </div>
                         <div id="position2">
-                            <img class="draggable" draggable="true" id="baldevermelhocor" src="../../img/baldevermelho.png"
-                                height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                            <img class="draggable" draggable="true" id="baldevermelhocor"
+                                src="../../img/baldevermelho.png" height="150px" ondragstart="drag(event)"
+                                onmouseover="changeCursor(id)">
                         </div>
                     </div>
                 </div>
@@ -36,33 +37,33 @@
                 <div id="Final">
                     <div id="divImg">
                         <div id="position3">
-                            <img class="droppable" data-draggable-id="cubovermelho" id="cubovermelho"
+                            <div>
+                                <img class="droppable" data-draggable-id="cubovermelho" id="cubovermelho"
                                 src="../../img/cubobranco.png" height="150px"
                                 ondrop="drop(event);verificarBox(event);verificarNext(6, 2)"
                                 ondragover="allowDrop(event);">
+                            </div>
+
+                            <div>
+                                <img class="droppable" src="../../img/cubovermelho.png" height="150px">
+                            </div>
                         </div>
 
                         <div id="position4">
-                            <img class="droppable" data-draggable-id="cuboazul" id="cuboazul"
+                            <div>
+
+                                <img class="droppable" data-draggable-id="cuboazul" id="cuboazul"
                                 src="../../img/cubobranco.png" height="150px"
                                 ondrop="drop(event);verificarBox(event);verificarNext(6, 2)"
                                 ondragover="allowDrop(event);">
-                        </div>
-                        <div id="position">
-                            <img style="visibility: hidden;" class="droppable" src="../../img/cubobranco.png"
-                                height="150px">
+                            </div>
+
+                                <div>
+                                    <img class="droppable" src="../../img/cuboazul.png" height="150px">
+                                </div>
                         </div>
 
-                        <div id="position">
-                            <img class="droppable" src="../../img/cubovermelho.png" height="150px">
-                        </div>
-                        <div id="position">
-                            <img class="droppable" src="../../img/cuboazul.png" height="150px">
-                        </div>
-                        <div id="position">
-                            <img style="visibility: hidden;" class="droppable" src="../../img/cubobranco.png"
-                                height="150px">
-                        </div>
+                   
 
                     </div>
                 </div>

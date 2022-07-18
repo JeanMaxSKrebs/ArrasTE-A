@@ -26,24 +26,63 @@
                                 src="../../img/baldeamarelo.png" height="150px" ondragstart="drag(event)"
                                 onmouseover="changeCursor(id)">
                         </div>
+                        <div id="position2">
+                            <img class="draggable" draggable="true" id="baldepretocor" src="../../img/baldepreto.png"
+                                height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                        </div>
+                        <div id="position3">
+                            <img class="draggable" draggable="true" id="baldeverdecor" src="../../img/baldeverde.png"
+                                height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                        </div>
                     </div>
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <div id="position2">
+                        <div id="position4">
                             <div>
+                                <img class="droppable" data-draggable-id="cuboverde" id="cuboverde"
+                                    src="../../img/cubobranco.png" height="150px"
+                                    ondrop="drop(event);verificarBox(event);verificarNext(9, 3)"
+                                    ondragover="allowDrop(event);">
+                            </div>
+
+                            <div>
+                                <img class="droppable" src="../../img/cuboverde.png" height="150px">
+                            </div>
+                        </div>
+
+                        <div id="position5">
+                            <div>
+
                                 <img class="droppable" data-draggable-id="cuboamarelo" id="cuboamarelo"
-                                src="../../img/cubobranco.png" height="150px"
-                                ondrop="drop(event);verificarBox(event);verificarNext(3, 1)"
-                                ondragover="allowDrop(event);">
+                                    src="../../img/cubobranco.png" height="150px"
+                                    ondrop="drop(event);verificarBox(event);verificarNext(9, 3)"
+                                    ondragover="allowDrop(event);">
                             </div>
 
                             <div>
                                 <img class="droppable" src="../../img/cuboamarelo.png" height="150px">
                             </div>
                         </div>
+
+                        <div id="position6">
+                            <div>
+
+                                <img class="droppable" data-draggable-id="cubopreto" id="cubopreto"
+                                    src="../../img/cubobranco.png" height="150px"
+                                    ondrop="drop(event);verificarBox(event);verificarNext(9, 3)"
+                                    ondragover="allowDrop(event);">
+                            </div>
+
+                            <div>
+                                <img class="droppable" src="../../img/cubopreto.png" height="150px">
+                            </div>
+                        </div>
+
+
+
                     </div>
                 </div>
             </section>

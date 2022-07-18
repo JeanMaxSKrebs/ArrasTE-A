@@ -76,6 +76,7 @@ a {
 }
 
 #divInicial {
+    overflow: auto;
     border: 2px solid black;
     top: 10px;
     left: 10px;
@@ -86,6 +87,7 @@ a {
 }
 
 #divFinal {
+    overflow: auto;
     border: 2px solid black;
     top: 10px;
     left: 50vw;
@@ -104,7 +106,7 @@ a {
 }
 
 #divImg div {
-    padding: 5vh;
+    padding: 3vh;
 }
 
 #Final img {
