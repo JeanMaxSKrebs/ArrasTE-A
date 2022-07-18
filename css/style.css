@@ -109,10 +109,6 @@ a {
     padding: 2vh;
 }
 
-#Final img {
-    /* filter: opacity(0.2) drop-shadow(0 0 0 #000); */
-}
-
 #boxVerificar {
     position: absolute;
     display: flex;

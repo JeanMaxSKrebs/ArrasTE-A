@@ -147,11 +147,11 @@ function verificarBox(ev) {
     if (cor) {
 
         verificar = bancodedados(elementComparation, elementId)
-        
+
         console.log(verificar);
         if (verificar) {
             elementId = elementComparation
-            
+
             pintarIMG(verificar, ev.composedPath()[0]);
         }
 
@@ -233,7 +233,7 @@ function mudarIMG(element, position) {
 function pintarIMG(nome, position) {
 
     console.log(nome)
-   
+
 
     position.src = "../../img/" + nome + ".png";
     position.setAttribute("draggable", "false");
@@ -279,6 +279,8 @@ function drop(ev) {
     // ev.target.appendChild(document.getElementById(data));
     // console.log(ev.dataTransfer.getData(data));
 }
+
+//usado para sons no carregados antes da pagina
 
 function playSong(element) {
     // console.log(element);

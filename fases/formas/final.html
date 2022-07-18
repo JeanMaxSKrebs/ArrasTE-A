@@ -35,10 +35,29 @@
     }
 </style>
 
-<body onload="formas()">
-    <div class="container">
-        <a href="../../fases.html">
-            <img src="../../img/parabens.png" alt="" srcset="">
+<script>
+    function audioEimagem(som, imagem) {
+        playSong(som);
+
+        a = document.createElement('a');
+        a.setAttribute("href", "../../fases.html");
+        img = document.getElementById('parabens');
+        a.appendChild(img);
+        // img.
+        // console.log(a);
+
+        container = document.getElementById('container');
+
+        // console.log(container);
+        container.appendChild(a);
+    }
+</script>
+
+<body>
+    <div id="container" class="container">
+            <a onclick="audioEimagem('palmas.mp3', 'parabens')">
+                <img  id="parabens" src="../../img/parabens.png" alt="" srcset="">
+            </a>
         </a>
     </div>
 
