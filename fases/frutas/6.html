@@ -21,9 +21,14 @@
             <section id="divInicial" class=".col-">
                 <div id="Inicial" class="draggable-elements">
                     <div id="divImg">
-                        <div id="position1">
-                            <img class="draggable" draggable="true" id="baldevermelhocor"
-                                src="../../img/baldevermelho.png" height="150px" ondragstart="drag(event)"
+                        <div id="position3">
+                            <img class="draggable" draggable="true" id="baldeverdecor"
+                                src="../../img/baldeverde.png" height="150px" ondragstart="drag(event)"
+                                onmouseover="changeCursor(id)">
+                        </div>
+                        <div id="position2">
+                            <img class="draggable" draggable="true" id="balderoxocor"
+                                src="../../img/balderoxo.png" height="150px" ondragstart="drag(event)"
                                 onmouseover="changeCursor(id)">
                         </div>
                     </div>
@@ -32,9 +37,15 @@
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <div id="position2">
-                            <img class="droppable" data-draggable-id="macasemcor" id="macasemcor" src="../../img/macasemcor.png"
-                                height="150px" ondrop="drop(event);verificarBox(event);verificarNext(2, 1)"
+                        <div id="position3">
+                            <img class="droppable" data-draggable-id="uvasemcor" id="uvasemcor" src="../../img/uvasemcor.png"
+                                height="150px" ondrop="drop(event);verificarBox(event);verificarNext(7, 2)"
+                                ondragover="allowDrop(event);">
+                        </div>
+
+                        <div id="position4">
+                            <img class="droppable" data-draggable-id="alfacesemcor" id="alfacesemcor" src="../../img/alfacesemcor.png"
+                                height="150px" ondrop="drop(event);verificarBox(event);verificarNext(7, 2)"
                                 ondragover="allowDrop(event);">
                         </div>
                     </div>

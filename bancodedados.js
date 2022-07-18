@@ -5,6 +5,9 @@ function bancodedados(cor, valor) {
     switch (cor) {
         case "baldevermelho":
             switch (valor) {
+                case "melanciasemcascasemcor":
+                    retorno = 'melanciasemcasca';
+                    break;
                 case "macasemcor":
                     retorno = 'maca';
                     break;
@@ -31,8 +34,25 @@ function bancodedados(cor, valor) {
 
         case "baldeamarelo":
             switch (valor) {
+                case "bananasemcor":
+                    retorno = 'banana';
+                    break;
                 case "cuboamarelo":
                     retorno = 'cuboamarelo';
+                    break;
+
+                default:
+                    break;
+            }
+            break;
+
+        case "baldelaranja":
+            switch (valor) {
+                case "laranjasemcor":
+                    retorno = 'laranja';
+                    break;
+                case "cubolaranja":
+                    retorno = 'cubolaranja';
                     break;
 
                 default:
@@ -52,8 +72,18 @@ function bancodedados(cor, valor) {
             }
             break;
 
+
         case "baldeverde":
             switch (valor) {
+                case "melanciasemcor":
+                    retorno = 'melancia';
+                    break;
+                case "kiwisemcascasemcor":
+                    retorno = 'kiwisemcasca';
+                    break;
+                case "alfacesemcor":
+                    retorno = 'alface';
+                    break;
                 case "cuboverde":
                     retorno = 'cuboverde';
                     break;
@@ -67,6 +97,37 @@ function bancodedados(cor, valor) {
             switch (valor) {
                 case "cuborosa":
                     retorno = 'cuborosa';
+                    break;
+
+                default:
+                    break;
+            }
+            break;
+
+        case "balderoxo":
+            switch (valor) {
+                case "uvasemcor":
+                    retorno = 'uva';
+                    break;
+                case "cuboroxo":
+                    retorno = 'cuboroxo';
+                    break;
+
+                default:
+                    break;
+            }
+            break;
+
+        case "baldemarrom":
+            switch (valor) {
+                case "cocosemcor":
+                    retorno = 'coco';
+                    break;
+                case "kiwicomcascasemcor":
+                    retorno = 'kiwicomcasca';
+                    break;
+                case "cubomarrom":
+                    retorno = 'cubomarrom';
                     break;
 
                 default:

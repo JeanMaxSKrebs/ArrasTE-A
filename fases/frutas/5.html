@@ -26,15 +26,26 @@
                                 src="../../img/baldevermelho.png" height="150px" ondragstart="drag(event)"
                                 onmouseover="changeCursor(id)">
                         </div>
+                        <div id="position2">
+                            <img class="draggable" draggable="true" id="baldeamarelocor"
+                                src="../../img/baldeamarelo.png" height="150px" ondragstart="drag(event)"
+                                onmouseover="changeCursor(id)">
+                        </div>
                     </div>
                 </div>
             </section>
             <section id="divFinal" class=".col- droppable-elements">
                 <div id="Final">
                     <div id="divImg">
-                        <div id="position2">
+                        <div id="position3">
+                            <img class="droppable" data-draggable-id="bananasemcor" id="bananasemcor" src="../../img/bananasemcor.png"
+                                height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2)"
+                                ondragover="allowDrop(event);">
+                        </div>
+
+                        <div id="position4">
                             <img class="droppable" data-draggable-id="macasemcor" id="macasemcor" src="../../img/macasemcor.png"
-                                height="150px" ondrop="drop(event);verificarBox(event);verificarNext(2, 1)"
+                                height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2)"
                                 ondragover="allowDrop(event);">
                         </div>
                     </div>
