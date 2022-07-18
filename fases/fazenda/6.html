@@ -16,15 +16,15 @@
 
 </head>
 
-<body onload="carregamento();shadowImage('vaca', '15vw', '35vh', 'cenario3'),shadowImage('boi', '80vw', '30vh', 'cenario3')">
+<body onload="carregamento();shadowImage('cachorro', '15vw', '35vh', 'cenario3'),shadowImage('gato', '80vw', '30vh', 'cenario3')">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
-                    <img src="../../img/vaca.png" height="150px" draggable="true" id="vacaImg"
+                    <img src="../../img/capturas/cachorrinho.png" height="150px" draggable="true" id="cachorrinhoImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
                         onmouseover="changeCursor(id)"></img>
-                    <img src="../../img/boi.png" height="150px" draggable="true" id="boiImg"
+                    <img src="../../img/capturas/gato.png" height="150px" draggable="true" id="gatoImg"
                         onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
                         onmouseover="changeCursor(id)"></img>
                 </div>
@@ -33,10 +33,10 @@
                 <img src="../../img/cenario3.png" class="cenario">
                 <div id="Final">
                     <div id="divImg">
-                        <img class="droppable" data-draggable-id="vaca" id="vaca" src="../../img/vaca shadow.png"
+                        <img class="droppable" data-draggable-id="gato" id="gato" src="../../img/capturas/gato shadow.png"
                             height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
                             ondragover="allowDrop(event);">
-                        <img class="droppable" data-draggable-id="boi" id="boi" src="../../img/boi shadow.png"
+                        <img class="droppable" data-draggable-id="cachorrinho" id="cachorrinho" src="../../img/capturas/cachorrinho shadow.png"
                             height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
                             ondragover="allowDrop(event);">
                     </div>

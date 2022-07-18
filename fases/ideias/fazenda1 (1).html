@@ -16,38 +16,45 @@
 
 </head>
 
-<body onload="carregamento();shadowImage('vaca', '15vw', '35vh', 'cenario3'),shadowImage('boi', '80vw', '30vh', 'cenario3')">
+<body onload = "carregamento();shadowImage('galinha', '80vw', '40vh', 'cenario1'), shadowImage('vaca', '30vw', '30vh', 'cenario1'), 
+shadowImage('ovelha', '50vw', '40vh', 'cenario1'), shadowImage('galinhaEscrita', '83vw', '39vh', 'cenario1'), 
+shadowImage('vacaEscrita', '35vw', '31vh', 'cenario1'), shadowImage('ovelhaEscrita', '53vw', '43vh', 'cenario1')">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
+                    <img src="../../img/galinha.png" height="150px" draggable="true" id="galinhaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
                     <img src="../../img/vaca.png" height="150px" draggable="true" id="vacaImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
-                        onmouseover="changeCursor(id)"></img>
-                    <img src="../../img/boi.png" height="150px" draggable="true" id="boiImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
-                        onmouseover="changeCursor(id)"></img>
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
+                    <img src="../../img/ovelha.png" height="150px" draggable="true" id="ovelhaImg"
+                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)" onmouseover="changeCursor(id)"></img>
                 </div>
             </section>
             <section id="divFinal" class="droppable-elements .col-">
-                <img src="../../img/cenario3.png" class="cenario">
+                <img src="../../img/cenario1.png" class="cenario">
                 <div id="Final">
                     <div id="divImg">
+                        <img class="droppable" data-draggable-id="galinhaEscrita" id="galinhaEscrita"
+                            src="../../img/galinhaEscrita.png" height="40px">
+                        <img class="droppable" data-draggable-id="vacaEscrita" id="vacaEscrita"
+                            src="../../img/vacaEscrita.png" height="40px">
+                        <img class="droppable" data-draggable-id="ovelhaEscrita" id="ovelhaEscrita"
+                            src="../../img/ovelhaEscrita.png" height="40px">
+                        <img class="droppable" data-draggable-id="galinha" id="galinha" src="../../img/galinha shadow.png"
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(4, 3)" ondragover="allowDrop(event);">
                         <img class="droppable" data-draggable-id="vaca" id="vaca" src="../../img/vaca shadow.png"
-                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
-                            ondragover="allowDrop(event);">
-                        <img class="droppable" data-draggable-id="boi" id="boi" src="../../img/boi shadow.png"
-                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
-                            ondragover="allowDrop(event);">
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(4, 3)" ondragover="allowDrop(event);">
+                        <img class="droppable" data-draggable-id="ovelha" id="ovelha" src="../../img/ovelha shadow.png"
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(4, 3)" ondragover="allowDrop(event);">
                     </div>
 
                 </div>
             </section>
-
         </div>
         <div class="row">
             <section>
-                <div id="buttoncomoJogar">
+                 <div id="buttoncomoJogar">
                     <a href="../../fases.html">
                         <img src="../../img/bt_06.png" height="75px">
                     </a>
@@ -60,9 +67,7 @@
         </div>
     </div>
 
-
     <footer>
-        <script id="DragDropTouch" src="https://bernardo-castilho.github.io/DragDropTouch/DragDropTouch.js"> </script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
