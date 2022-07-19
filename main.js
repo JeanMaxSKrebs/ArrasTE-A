@@ -338,6 +338,8 @@ async function proximaFase(nextPage) {
         // debugger;
         window.location.href = "../../" + nextPage + ".html";
 
+    } else if(nextPage == "final") {
+        window.location.href = "../../" + nextPage + ".html";
     }
 
     await sleep(1500);
