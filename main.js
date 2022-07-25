@@ -298,7 +298,7 @@ function playSong(element) {
         });
 }
 
-function verificarSong(element, letrasRetirar, tipo) {
+function verificarSong(element, letrasRetirar, fase, tipo) {
 
     element = retirarLetras(element, letrasRetirar);
 
@@ -311,6 +311,10 @@ function verificarSong(element, letrasRetirar, tipo) {
     } else {
         element = element + '.mpeg';
     }
+    console.log(element);
+
+    element = fase + "/" + element;
+    
     console.log(element);
     // exceçoes
 
