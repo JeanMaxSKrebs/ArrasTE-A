@@ -37,7 +37,7 @@
 
 <script>
     function audioEimagem(som, imagem) {
-        playSong(som);
+        play(som);
 
         a = document.createElement('a');
         a.setAttribute("href", "fases.html");
@@ -51,17 +51,29 @@
         // console.log(container);
         container.appendChild(a);
     }
+
+    function play(element) {
+        audio = new Audio("audio/" + element);
+
+        // console.log(audio);
+        audio.play()
+            .then(() => {
+                // Audio is playing.
+                console.log("tocando");
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    }
 </script>
 
 <body>
     <div id="container" class="container">
-            <a onclick="audioEimagem('palmas.mp3', 'parabens')">
-                <img  id="parabens" src="img/parabens.png" alt="" srcset="">
-            </a>
+        <a onclick="audioEimagem('palmas.mp3', 'parabens')">
+            <img id="parabens" src="img/parabenspoucaestrela.png" alt="" srcset="">
+        </a>
         </a>
     </div>
-
-
 
     <footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
