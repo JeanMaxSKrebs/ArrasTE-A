@@ -15,19 +15,21 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 </head>
 
-<body onload = "carregamento()">
+<body onload="carregamento()">
     <div class="container">
         <div class="row">
             <section id="divInicial" class=".col-">
                 <div id="Inicial" class="draggable-elements">
                     <div id="divImg">
                         <div id="position1">
-                            <img class="draggable" draggable="true" id="quadradoImg" src="../../img/quadrado.png" height="100px"
-                                ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                            <img class="draggable" draggable="true" id="quadradoImg" src="../../img/quadrado.png"
+                                height="100px" onmousedown="verificarSong(id, 3, 'formas')" ondragstart="drag(event)"
+                                onmouseover="changeCursor(id)">
                         </div>
                         <div id="position2">
-                            <img class="draggable" draggable="true" id="quadradoGImg" src="../../img/quadrado.png" height="200px"
-                                ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                            <img class="draggable" draggable="true" id="quadradoGrandeImg" src="../../img/quadrado.png"
+                                height="200px" onmousedown="verificarSong(id, 3, 'formas', 'mp3')" ondragstart="drag(event)"
+                                onmouseover="changeCursor(id)">
                         </div>
                     </div>
                 </div>
@@ -36,13 +38,15 @@
                 <div id="Final">
                     <div id="divImg">
                         <div id="position3">
-                            <img class="droppable" data-draggable-id="quadradoG" id="quadradoG" src="../../img/quadrado shadow.png"
-                                height="200px" ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
+                            <img class="droppable" data-draggable-id="quadradoGrande" id="quadradoGrande"
+                                src="../../img/quadrado shadow.png" height="200px"
+                                ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
                                 ondragover="allowDrop(event);">
                         </div>
                         <div id="position4">
-                            <img class="droppable" data-draggable-id="quadrado" id="quadrado" src="../../img/quadrado shadow.png"
-                                height="100px" ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
+                            <img class="droppable" data-draggable-id="quadrado" id="quadrado"
+                                src="../../img/quadrado shadow.png" height="100px"
+                                ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
                                 ondragover="allowDrop(event);">
                         </div>
                     </div>
@@ -51,7 +55,7 @@
         </div>
         <div class="row">
             <section>
-                 <div id="buttoncomoJogar">
+                <div id="buttoncomoJogar">
                     <a href="../../fases.html">
                         <img src="../../img/bt_06.png" height="100px">
                     </a>

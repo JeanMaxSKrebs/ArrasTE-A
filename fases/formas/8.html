@@ -23,11 +23,11 @@
                     <div id="divImg">
                         <div id="position1">
                             <img class="draggable" draggable="true" id="circuloImg" src="../../img/circulo.png"
-                                height="100px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                                height="100px" onmousedown="verificarSong(id, 3, 'formas')" ondragstart="drag(event)" onmouseover="changeCursor(id)">
                         </div>
                         <div id="position2">
-                            <img class="draggable" draggable="true" id="circuloGImg" src="../../img/circulo.png"
-                                height="200px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                            <img class="draggable" draggable="true" id="circuloGrandeImg" src="../../img/circulo.png"
+                                height="200px" onmousedown="verificarSong(id, 3, 'formas', 'mp3')" ondragstart="drag(event)" onmouseover="changeCursor(id)">
                         </div>
                     </div>
                 </div>
@@ -36,7 +36,7 @@
                 <div id="Final">
                     <div id="divImg">
                         <div id="position3">
-                            <img class="droppable" data-draggable-id="circuloG" id="circuloG"
+                            <img class="droppable" data-draggable-id="circuloGrande" id="circuloGrande"
                                 src="../../img/circulo shadow.png" height="200px"
                                 ondrop="drop(event);verificarBox(event);verificarNext(9, 2)"
                                 ondragover="allowDrop(event);">
@@ -81,6 +81,9 @@
         <audio src='../../audio/formas/circulo.mpeg'></audio>
         <audio src='../../audio/formas/quadrado.mpeg'></audio>
         <audio src='../../audio/formas/triangulo.mpeg'></audio>
+        <audio src='../../audio/formas/circuloGrande.mpeg'></audio>
+        <audio src='../../audio/formas/quadradoGrande.mpeg'></audio>
+        <audio src='../../audio/formas/trianguloGrande.mpeg'></audio>
         <audio src='../../audio/muito_bem.mpeg'></audio>
         <audio src='../../audio/tente_novamente.mpeg'></audio>
 

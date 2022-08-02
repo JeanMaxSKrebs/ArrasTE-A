@@ -141,9 +141,8 @@ function verificarBox(ev) {
 
     // console.log(cor)
     console.log(element);
-    // console.log(elementId);
-    // console.log(elementComparation);
-    console.log("CACETE")
+    console.log(elementId);
+    console.log(elementComparation);
     if (cor) {
 
         verificar = bancodedados(elementComparation, elementId)
@@ -303,17 +302,18 @@ function verificarSong(element, letrasRetirar, fase, tipo) {
     element = retirarLetras(element, letrasRetirar);
 
     if (tipo == 'mpeg') {
-        element = element + 'Song.mpeg';
+        element = element + '.mpeg';
     } else if (tipo == 'mp3') {
-        element = element + 'Song.mp3';
+        element = element + '.mp3';
     } else if (tipo == 'wav') {
-        element = element + 'Song.wav';
+        element = element + '.wav';
     } else {
         element = element + '.mpeg';
     }
     console.log(element);
-
-    element = fase + "/" + element;
+    if (fase) {
+        element = fase + "/" + element;
+    }
     
     console.log(element);
     // exceçoes
@@ -327,9 +327,9 @@ function retirarLetras(element, qtd) {
 }
 
 function verificarNext(nextPage, valor) {
-    console.log(nextPage);
+    // console.log(nextPage);
     // console.log(next);
-    console.log(valor);
+    // console.log(valor);
 
     if (next >= valor)
         proximaFase(nextPage);

@@ -22,16 +22,17 @@
                 <div id="Inicial" class="draggable-elements">
                     <div id="divImg">
                         <div id="position1">
-                            <img class="draggable" draggable="true" id="quadradoGImg" src="../../img/quadrado.png"
-                                height="200px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                            <img class="draggable" draggable="true" id="trianguloGrandeImg" src="../../img/triangulo.png"
+                                height="200px" onmousedown="verificarSong(id, 3, 'formas', 'mp3')" ondragstart="drag(event)" onmouseover="changeCursor(id)">
                         </div>
                         <div id="position2">
-                            <img class="draggable" draggable="true" id="trianguloGImg" src="../../img/triangulo.png"
-                                height="200px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                            <img class="draggable" draggable="true" id="quadradoGrandeImg" src="../../img/quadrado.png"
+                                height="200px" onmousedown="verificarSong(id, 3, 'formas', 'mp3')" ondragstart="drag(event)"
+                                onmouseover="changeCursor(id)">
                         </div>
                         <div id="position3">
-                            <img class="draggable" draggable="true" id="circuloGImg" src="../../img/circulo.png"
-                                height="200px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                            <img class="draggable" draggable="true" id="circuloGrandeImg" src="../../img/circulo.png"
+                                height="200px" onmousedown="verificarSong(id, 3, 'formas', 'mp3')" ondragstart="drag(event)" onmouseover="changeCursor(id)">
                         </div>
                     </div>
                 </div>
@@ -40,19 +41,19 @@
                 <div id="Final">
                     <div id="divImg">
                         <div id="position4">
-                            <img class="droppable" data-draggable-id="quadradoG" id="quadradoG"
+                            <img class="droppable" data-draggable-id="quadradoGrande" id="quadradoGrande"
                                 src="../../img/quadrado shadow.png" height="200px"
                                 ondrop="drop(event);verificarBox(event);verificarNext(12, 3)"
                                 ondragover="allowDrop(event);">
                         </div>
                         <div id="position5">
-                            <img class="droppable" data-draggable-id="circuloG" id="circuloG"
+                            <img class="droppable" data-draggable-id="circuloGrande" id="circuloGrande"
                                 src="../../img/circulo shadow.png" height="200px"
                                 ondrop="drop(event);verificarBox(event);verificarNext(12, 3)"
                                 ondragover="allowDrop(event);">
                         </div>
                         <div id="position6">
-                            <img class="droppable" data-draggable-id="trianguloG" id="trianguloG"
+                            <img class="droppable" data-draggable-id="trianguloGrande" id="trianguloGrande"
                                 src="../../img/triangulo shadow.png" height="200px"
                                 ondrop="drop(event);verificarBox(event);verificarNext(12, 3)"
                                 ondragover="allowDrop(event);">
