@@ -23,12 +23,14 @@
                     <div id="divImg">
                         <div id="position1">
                             <img class="draggable" draggable="true" id="baldelaranjacor"
-                                src="../../img/baldelaranja.png" height="150px" ondragstart="drag(event)"
+                                src="../../img/baldelaranja.png" height="150px"
+                                onmousedown="verificarSong(id, 3, 'cores', 'mp3', 5)" ondragstart="drag(event)"
                                 onmouseover="changeCursor(id)">
                         </div>
                         <div id="position2">
                             <img class="draggable" draggable="true" id="baldemarromcor" src="../../img/baldemarrom.png"
-                                height="150px" ondragstart="drag(event)" onmouseover="changeCursor(id)">
+                                height="150px" onmousedown="verificarSong(id, 3, 'cores', 'mp3', 5)"
+                                ondragstart="drag(event)" onmouseover="changeCursor(id)">
                         </div>
                     </div>
                 </div>
@@ -39,9 +41,10 @@
                         <div id="position3">
                             <div>
                                 <img class="droppable" data-draggable-id="cocosemcor" id="cocosemcor"
-                                src="../../img/cocosemcor.png" height="150px"
-                                ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
-                                ondragover="allowDrop(event);">
+                                    src="../../img/cocosemcor.png" height="150px"
+                                    onmousedown="verificarSong(id, 6, 'frutas', 'mp3')"
+                                    ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
+                                    ondragover="allowDrop(event);">
                             </div>
 
                             <div>
@@ -53,17 +56,18 @@
                             <div>
 
                                 <img class="droppable" data-draggable-id="laranjasemcor" id="laranjasemcor"
-                                src="../../img/laranjasemcor.png" height="150px"
-                                ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
-                                ondragover="allowDrop(event);">
+                                    src="../../img/laranjasemcor.png" height="150px"
+                                    onmousedown="verificarSong(id, 6, 'frutas', 'mp3')"
+                                    ondrop="drop(event);verificarBox(event);verificarNext(10, 2)"
+                                    ondragover="allowDrop(event);">
                             </div>
 
-                                <div>
-                                    <img class="droppable" src="../../img/laranja.png" height="150px">
-                                </div>
+                            <div>
+                                <img class="droppable" src="../../img/laranja.png" height="150px">
+                            </div>
                         </div>
 
-                   
+
 
                     </div>
                 </div>
