@@ -22,10 +22,10 @@
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
                     <img src="../../img/capturas/porco.png" height="150px" draggable="true" id="porcoImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
+                        onmousedown="verificarSong(id, 3, 'animais', 'mp3')" ondragstart="drag(event)"
                         onmouseover="changeCursor(id)"></img>
                     <img src="../../img/capturas/pato.png" height="150px" draggable="true" id="patoImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
+                        onmousedown="verificarSong(id, 3, 'animais', 'mp3')" ondragstart="drag(event)"
                         onmouseover="changeCursor(id)"></img>
                 </div>
             </section>
@@ -34,10 +34,10 @@
                 <div id="Final">
                     <div id="divImg">
                         <img class="droppable" data-draggable-id="porco" id="porco" src="../../img/capturas/porco shadow.png"
-                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext('final', 2);"
                             ondragover="allowDrop(event);">
                         <img class="droppable" data-draggable-id="pato" id="pato" src="../../img/capturas/pato shadow.png"
-                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext('final', 2);"
                             ondragover="allowDrop(event);">
                     </div>
 

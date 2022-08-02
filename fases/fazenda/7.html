@@ -22,10 +22,10 @@
             <section id="divInicial" class=".col-">
                 <div class="draggable-elements">
                     <img src="../../img/capturas/cavalo.png" height="150px" draggable="true" id="cavaloImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
+                        onmousedown="verificarSong(id, 3, 'animais', 'mp3')" ondragstart="drag(event)"
                         onmouseover="changeCursor(id)"></img>
                     <img src="../../img/capturas/gato.png" height="100px" draggable="true" id="gatoImg"
-                        onmousedown="verificarSong(id, 3)" ondragstart="drag(event)"
+                        onmousedown="verificarSong(id, 3, 'animais', 'mp3')" ondragstart="drag(event)"
                         onmouseover="changeCursor(id)"></img>
                 </div>
             </section>
@@ -34,10 +34,10 @@
                 <div id="Final">
                     <div id="divImg">
                         <img class="droppable" data-draggable-id="gato" id="gato" src="../../img/capturas/gato shadow.png"
-                            height="100px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
+                            height="100px" ondrop="drop(event);verificarBox(event);verificarNext(8, 2);"
                             ondragover="allowDrop(event);">
                         <img class="droppable" data-draggable-id="cavalo" id="cavalo" src="../../img/capturas/cavalo shadow.png"
-                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(6, 2);"
+                            height="150px" ondrop="drop(event);verificarBox(event);verificarNext(8, 2);"
                             ondragover="allowDrop(event);">
                     </div>
 
@@ -68,7 +68,7 @@
             crossorigin="anonymous"></script>
         <script src="../../main.js" defer></script>
 
-        <audio src='../../audio/galinha.mpeg'></audio>
+        <audio src='../../audio/animais/cavalo .mp3'></audio>
         <audio src='../../audio/vaca.mpeg'></audio>
         <audio src='../../audio/ovelha.mpeg'></audio>
         <audio src='../../audio/muito_bem.mpeg'></audio>
