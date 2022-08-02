@@ -297,9 +297,12 @@ function playSong(element) {
         });
 }
 
-function verificarSong(element, letrasRetirar, fase, tipo) {
+function verificarSong(element, letrasRetirar, fase, tipo, letrasRetirarAntes) {
 
     element = retirarLetras(element, letrasRetirar);
+    console.log(element);
+    element = retirarLetrasAntes(element, letrasRetirarAntes);
+    console.log(element);
 
     if (tipo == 'mpeg') {
         element = element + '.mpeg';
@@ -322,6 +325,11 @@ function verificarSong(element, letrasRetirar, fase, tipo) {
 }
 function retirarLetras(element, qtd) {
     newElement = element.substring(0, element.length - qtd);
+
+    return newElement;
+}
+function retirarLetrasAntes(element, qtd) {
+    newElement = element.substring(qtd, element.length);
 
     return newElement;
 }
